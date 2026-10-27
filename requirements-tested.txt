@@ -1,0 +1,5 @@
+langgraph==1.2.16
+langchain-core==1.6.12
+pydantic==2.14.0
+lxml==6.1.1
+numpy==2.3.5

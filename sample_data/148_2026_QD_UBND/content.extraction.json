@@ -1,0 +1,11 @@
+{
+  "source": "content.html",
+  "output": "content.txt",
+  "method": "html_text_v1",
+  "extracted_at_utc": "2026-10-18T02:56:37.559385+00:00",
+  "source_sha256": "d3f723dea86f0b7929e1241c138756ce4eb6e4726ca3892fe84794a64c3a1d8b",
+  "text_sha256": "935e944169f726d3e47e3b44a1208efe9a2849e0127774c7e5c8e78bd3480082",
+  "characters": 19101,
+  "nonempty": true,
+  "note": "Derived from full-text HTML; no PDF/OCR. Table geometry, images and automatic list numbering are not reconstructed."
+}

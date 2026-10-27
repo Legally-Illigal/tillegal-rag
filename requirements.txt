@@ -1,0 +1,7 @@
+langgraph>=1,<2
+pydantic>=2,<3
+lxml>=5,<7
+numpy>=1.26
+tzdata; sys_platform == 'win32'
+# Optional: langchain>=1,<2 + provider integration for real LLM
+# Optional: sentence-transformers for dense/reranking

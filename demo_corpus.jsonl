@@ -1,0 +1,3 @@
+{"chunk_id":"DEMO-v1-a1","document_id":"DEMO","version_id":"v1","title":"Văn bản GIẢ LẬP - không phải luật","article":"1","content":"Quy tắc DEMO: hồ sơ mẫu cần có mã X.","effective_from":"2020-01-01","effective_to":null,"validity_known":true}
+{"chunk_id":"DEMO-v1-a2","document_id":"DEMO","version_id":"v1","title":"Văn bản GIẢ LẬP - không phải luật","article":"2","content":"Ngoại lệ DEMO: hồ sơ mẫu loại Y không cần mã X.","effective_from":"2020-01-01","effective_to":null,"validity_known":true}
+{"chunk_id":"DEMO-old-a1","document_id":"DEMO","version_id":"old","title":"Bản GIẢ LẬP cũ","article":"1","content":"Quy tắc DEMO cũ: hồ sơ mẫu cần có mã Z.","effective_from":"2010-01-01","effective_to":"2020-01-01","validity_known":true}

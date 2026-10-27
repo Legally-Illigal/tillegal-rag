@@ -1,0 +1,618 @@
+<html>
+ <head>
+  <meta charset="utf-8">
+  <style>
+            html { overflow-y: scroll; }
+            body {
+                margin: 0;
+                background: #e8e8e8;
+            }
+            .docx-viewport { width: 100%; overflow: hidden; }
+            .docx-page {
+                font-family: 'Times New Roman', serif;
+                background: white;
+                box-sizing: border-box;
+                width: 100%;
+                padding: 48.2pt 56.7pt 48.2pt 85.0pt;
+                margin: 0;
+                transform-origin: top left;
+                text-align: justify;
+                color: #333;
+            }
+            p { margin: 0; min-height: 1.2em; }
+            table { border-collapse: collapse; width: 100%; margin: 20px 0; }
+            th, td { padding: 10px; }
+            span { font-family: inherit; }
+            .num-prefix {
+                display: inline-block;
+                min-width: 20px;
+                margin-right: 5px;
+                font-weight: inherit;
+            }
+            .docx-header {
+                text-align: center;
+                margin-bottom: 20px;
+                border-bottom: 1px solid #ccc;
+                padding-bottom: 10px;
+            }
+            .docx-header p { text-align: center; margin: 5px 0; white-space: pre; }
+            .docx-footer {
+                text-align: center;
+                margin-top: 20px;
+                border-top: 1px solid #ccc;
+                padding-top: 10px;
+            }
+            .docx-footer p { text-align: center; margin: 5px 0; }
+            .footnote-ref a { font-size: 0.75em; vertical-align: super; text-decoration: none; color: #0563C1; }
+            .footnotes-sep { margin-top: 2em; border: none; border-top: 1px solid #ccc; }
+            .footnotes { font-size: 0.85em; margin-top: 1em; }
+            .footnotes-list { padding-left: 1.5em; }
+            .footnote-item { margin-bottom: 0.5em; }
+            .footnote-backref { text-decoration: none; margin-left: 0.5em; }
+        </style>
+  <script>
+        document.addEventListener('click', function(e) {
+            var a = e.target.closest('a[href^="#"]');
+            if (!a) return;
+            var id = a.getAttribute('href').slice(1);
+            var target = document.getElementById(id);
+            if (!target) return;
+            e.preventDefault();
+            target.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        });
+        (function() {
+            var PAGE_W_PT = 595.3;
+            var naturalW = PAGE_W_PT * 96 / 72;
+            function fit() {
+                var page = document.querySelector('.docx-page');
+                var vp = document.querySelector('.docx-viewport');
+                if (!page || !vp) return;
+                page.style.width = naturalW + 'px';
+                page.style.transform = 'none';
+                var naturalH = page.offsetHeight;
+                var scale = vp.clientWidth / naturalW;
+                page.style.transform = 'scale(' + scale + ')';
+                vp.style.height = (naturalH * scale) + 'px';
+            }
+            window.addEventListener('resize', fit);
+            window.addEventListener('load', fit);
+            if (document.readyState === 'loading') {
+                document.addEventListener('DOMContentLoaded', fit);
+            } else {
+                fit();
+            }
+        })();
+        </script>
+ </head>
+ <body>
+  <main class="docx-viewport">
+   <article class="docx-page" data-page-width-pt="595.3">
+    <table border="0" class="prov-table" style="border-collapse: collapse; width: 100%; margin: 15px 0;">
+     <tbody>
+      <tr>
+       <td style="padding: 8px;">
+        <p style="text-align: center; margin: 0pt 0 0pt"><span style="font-size: 14.0pt"><strong>ỦY BAN NHÂN DÂN</strong></span></p>
+        <p style="text-align: center; margin: 0pt 0 0pt"><span style="font-size: 14.0pt"><strong>THÀNH PHỐ ĐÀ NẴNG</strong></span></p></td>
+       <td style="padding: 8px;">
+        <p style="text-align: center; margin: 0pt 0 0pt"><span style="font-size: 14.0pt"><strong>CỘNG HÒA XÃ HỘI CHỦ NGHĨA VIỆT NAM</strong></span></p>
+        <p style="text-align: center; margin: 0pt 0 0pt"><span style="font-size: 14.0pt"><strong>Độc lập - Tự do - Hạnh phúc</strong></span></p></td>
+      </tr>
+      <tr>
+       <td style="padding: 8px;">
+        <p style="text-align: center; margin: 6.0pt 0 0pt"><span style="font-size: 14.0pt">Số: 148/2026/QĐ-UBND</span></p>
+        <p>&nbsp;</p></td>
+       <td style="padding: 8px;">
+        <p style="text-align: center; margin: 6.0pt 0 0pt"><span style="font-size: 14.0pt"><em>Đà Nẵng, ngày 14 tháng 10 năm 2026</em></span></p></td>
+      </tr>
+     </tbody>
+    </table>
+    <p style="text-align: center; margin: 0pt 0 0pt"><span style="font-size: 14.0pt"><strong>QUYẾT ĐỊNH</strong></span></p>
+    <p style="text-align: center; margin: 0pt 0 0pt"><span style="color: #000000; font-family: 'TimesNewRomanPS-BoldMT;Times New Roman', serif; font-size: 14.0pt"><strong>Ban hành tiêu chí thôn nông thôn mới giai đoạn 2026-2030 </strong></span></p>
+    <p style="text-align: center; margin: 0pt 0 0pt"><span style="color: #000000; font-family: 'TimesNewRomanPS-BoldMT;Times New Roman', serif; font-size: 14.0pt"><strong>áp dụng trên địa bàn thành phố Đà Nẵng</strong></span></p>
+    <p>&nbsp;</p>
+    <p style="text-align: justify; margin: 4.0pt 0 4.0pt"><span style="font-size: 14.0pt"><em>Căn cứ Luật Tổ chức chính quyền địa phương số <a href="/van-ban/chi-tiet/178340" target="_blank" rel="noopener noreferrer">72/2025/QH15</a>;</em></span></p>
+    <p style="margin: 4.0pt 0 4.0pt"><span style="font-size: 14.0pt"><em>Căn cứ Luật Ban hành văn bản quy phạm pháp luật số <a href="/van-ban/chi-tiet/175440" target="_blank" rel="noopener noreferrer">64/2025/QH15</a> được sửa đổi, bổ sung bởi Luật số <a href="/van-ban/chi-tiet/178717" target="_blank" rel="noopener noreferrer">87/2025/QH15</a>;</em></span></p>
+    <p style="margin: 4.0pt 0 4.0pt"><span style="font-size: 14.0pt"><em>Căn cứ</em> <em>Nghị định số <a href="/van-ban/chi-tiet/176696" target="_blank" rel="noopener noreferrer">78/2025/NĐ-CP</a> của Chính phủ quy định chi tiết một số điều và biện pháp để tổ chức, hướng dẫn thi hành Luật Ban hành văn bản quy phạm pháp luật được sửa đổi, bổ sung bởi Nghị định số <a href="/van-ban/chi-tiet/179644" target="_blank" rel="noopener noreferrer">187/2025/NĐ-CP</a>;</em></span></p>
+    <p style="text-align: justify; margin: 4.0pt 0 4.0pt"><span style="font-size: 14.0pt"><em>Căn cứ Quyết định số <a href="/van-ban/chi-tiet/186295" target="_blank" rel="noopener noreferrer">51/2025/QĐ-TTg</a> của Thủ tướng Chính phủ </em></span><span style="color: #000000; font-family: 'TimesNewRomanPS-BoldMT;Times New Roman', serif; font-size: 14.0pt"><strong><em>Ban hành Bộ tiêu chí quốc gia về nông thôn mới giai đoạn 2026-2030</em></strong></span><span style="font-size: 14.0pt">;</span></p>
+    <p style="text-align: justify; margin: 4.0pt 0 4.0pt"><span style="font-size: 14.0pt"><em>Theo đề nghị của Giám đốc Sở Nông nghiệp và Môi trường tại Tờ trình số 1149/TTr-SNNMT ngày 03 tháng 10 năm 2026 về việc đề nghị </em></span><span style="color: #000000; font-family: 'TimesNewRomanPS-BoldMT;Times New Roman', serif; font-size: 14.0pt"><strong><em>Ban hành tiêu chí thôn nông thôn mới giai đoạn 2026-2030 áp dụng trên địa bàn thành phố Đà Nẵng và trên cơ sở ý kiến thống nhất của các thành viên Ủy ban nhân dân thành phố;</em></strong></span></p>
+    <p style="text-align: justify; margin: 4.0pt 0 4.0pt"><span style="color: #000000; font-family: 'TimesNewRomanPS-BoldMT;Times New Roman', serif; font-size: 14.0pt"><strong><em>Ủy ban nhân dân thành phố ban hành Quyết định tiêu chí thôn nông thôn mới giai đoạn 2026-2030 áp dụng trên địa bàn thành phố Đà Nẵng.</em></strong></span></p>
+    <p class="prov-article" data-block-id="" data-node-id="" id="2ab69734-c15d-4340-b6da-02e8a2ca2855" style="text-align: justify; margin: 4.0pt 0 4.0pt"><span style="font-size: 14.0pt"><strong>Điều 1.</strong> <strong>Phạm vi điều chỉnh và đối tượng áp dụng</strong></span></p>
+    <p class="prov-clause" data-block-id="" data-node-id="" id="bc5f8ee8-8b65-4c89-bcd1-510f1a09298f" style="text-align: justify; margin: 4.0pt 0 4.0pt"><span style="font-size: 14.0pt">1. Quy định tiêu chí thôn nông thôn mới giai đoạn 2026-2030 áp dụng trên địa bàn thành phố Đà Nẵng theo Phụ lục đính kèm.</span></p>
+    <p class="prov-clause" data-block-id="" data-node-id="" id="f6c978a8-01d1-481a-9e8d-eb0207d328ab" style="text-align: justify; margin: 4.0pt 0 4.0pt"><span style="font-size: 14.0pt">2. Quyết định này áp dụng đối với các Sở, Ban, ngành; Ủy ban nhân dân xã; các cơ quan, tổ chức và cá nhân có liên quan trong quá trình thực hiện tiêu chí thôn nông thôn mới giai đoạn 2026-2030</span><span style="font-size: 13.0pt"> </span><span style="font-size: 14.0pt">trên địa bàn thành phố Đà Nẵng.</span></p>
+    <p class="prov-article" data-block-id="" data-node-id="" id="cde80cc7-9a54-48d5-9df4-981db87220a6" style="text-align: justify; margin: 4.0pt 0 4.0pt"><span style="font-size: 14.0pt"><strong>Điều 2. Tổ chức thực hiện</strong></span></p>
+    <p class="prov-clause" data-block-id="" data-node-id="" id="d01e81a1-ee2b-47f7-b87e-b4c20eb52e14" style="text-align: justify; margin: 4.0pt 0 4.0pt"><span style="font-size: 14.0pt">1. Thủ trưởng các Sở, Ban, ngành liên quan căn cứ chức năng, nhiệm vụ được Ủy ban nhân dân thành phố giao trong xây dựng nông thôn mới hỗ trợ các địa phương triển khai thực hiện các tiêu chí thôn nông thôn mới theo quy định.</span></p>
+    <p class="prov-clause" data-block-id="" data-node-id="" id="4cdb70b2-7856-4711-a0d4-612dbdad1556" style="text-align: justify; margin: 4.0pt 0 4.0pt"><span style="font-size: 14.0pt">2. Sở Nông nghiệp và Môi trường</span></p>
+    <p class="prov-item" data-block-id="" data-node-id="" id="dad89e08-ed03-410a-b9da-c58f24e44285" style="text-align: justify; margin: 4.0pt 0 4.0pt"><span style="font-size: 14.0pt">a) Chủ trì, phối hợp với các Sở, Ban, ngành liên quan tham mưu Ủy ban nhân dân thành phố, Chủ tịch Ủy ban nhân dân thành phố chỉ đạo, hướng dẫn các địa phương triển khai thực hiện quyết định này; tổ chức kiểm tra, theo dõi, đôn đốc trong quá trình thực hiện; báo cáo, đề xuất Ủy ban nhân dân thành phố, Chủ tịch Ủy ban nhân dân thành phố chỉ đạo, xử lý các khó khăn, vướng mắc phát sinh (nếu có).</span></p>
+    <p class="prov-item" data-block-id="" data-node-id="" id="82aa35b0-3152-4f0d-abee-368ef2c5abcd" style="text-align: justify; margin: 4.0pt 0 4.0pt"><span style="font-size: 14.0pt">b) Hướng dẫn các địa phương thực hiện thôn đạt chuẩn nông thôn mới theo chức năng, nhiệm vụ được giao.</span></p>
+    <p class="prov-item" data-block-id="" data-node-id="" id="3a3dedfd-5748-4071-b505-12bdf895c287" style="text-align: justify; margin: 4.0pt 0 4.0pt"><span style="font-size: 14.0pt">c) Tham mưu Ủy ban nhân dân thành phố sơ kết, tổng kết, đánh giá kết quả thực hiện tiêu chí thôn nông thôn mới hằng năm, giữa kỳ và giai đoạn; đề xuất điều chỉnh, bổ sung các nội dung tiêu chí cho phù hợp với yêu cầu thực tiễn. Hằng năm, phối hợp với Sở Nội vụ tham mưu Chủ tịch Ủy ban nhân dân thành phố khen thưởng các thôn có thành tích xuất sắc trong thực hiện tiêu chí thôn nông thôn mới.</span></p>
+    <p class="prov-clause" data-block-id="" data-node-id="" id="9477d910-5ea0-4b47-bb4e-5fd8bbd0e4f5" style="text-align: justify; margin: 4.0pt 0 4.0pt"><span style="font-size: 14.0pt">3. Đề nghị Ủy ban Mặt trận Tổ quốc Việt Nam thành phố chỉ đạo, hướng dẫn Ủy ban Mặt trận Tổ quốc Việt Nam xã tuyên truyền, vận động Nhân dân tham gia thực hiện các tiêu chí thôn nông thôn mới; hướng dẫn việc lấy ý kiến sự hài lòng của người dân đối với kết quả xây dựng thôn nông thôn mới theo quy định; đồng thời, phát huy vai trò giám sát, phản biện xã hội và vận động Nhân dân tham gia giám sát việc thực hiện các tiêu chí tại địa phương.</span></p>
+    <p class="prov-clause" data-block-id="" data-node-id="" id="6a79984a-7ba1-432d-9199-3c7f361ea8d4" style="text-align: justify; margin: 4.0pt 0 4.0pt"><span style="font-size: 14.0pt">4. Ủy ban nhân dân xã</span></p>
+    <p class="prov-item" data-block-id="" data-node-id="" id="fb490915-848d-4232-af37-775618403036" style="text-align: justify; margin: 4.0pt 0 4.0pt"><span style="font-size: 14.0pt">a) Tổ chức quán triệt, tuyên truyền và triển khai thực hiện Quyết định này trên địa bàn đảm bảo hiệu quả, chất lượng; phân công nhiệm vụ cụ thể cho các cơ quan, đơn vị, tổ chức, cá nhân có liên quan trong tổ chức triển khai thực hiện các chỉ tiêu, tiêu chí thôn nông thôn mới.</span></p>
+    <p class="prov-item" data-block-id="" data-node-id="" id="da5a3840-4048-4244-8a79-f0554c5faed8" style="text-align: justify; margin: 4.0pt 0 4.0pt"><span style="font-size: 14.0pt">b) Xây dựng và tổ chức thực hiện phương án, kế hoạch xây dựng thôn nông thôn mới giai đoạn và hằng năm; kế hoạch duy trì, nâng cao chất lượng các tiêu chí; chủ động cân đối, lồng ghép, bố trí nguồn lực thực hiện theo phân cấp ngân sách và quy định của pháp luật. Định kỳ 6 tháng, năm báo cáo kết quả thực hiện tiêu chí thôn nông thôn mới về Ủy ban nhân dân thành phố (qua Sở Nông nghiệp và Môi trường) để theo dõi, chỉ đạo.</span></p>
+    <p class="prov-article" data-block-id="" data-node-id="" id="21942705-ea81-412e-b30a-1432ffcab60d" style="text-align: justify; margin: 4.0pt 0 4.0pt"><span style="font-size: 14.0pt"><strong>Điều 3. Hiệu lực thi hành</strong></span></p>
+    <p class="prov-clause" data-block-id="" data-node-id="" id="7ae41844-229d-4a38-8046-b66e64664522" style="text-align: justify; margin: 4.0pt 0 4.0pt"><span style="font-size: 14.0pt">1. Quyết định này có hiệu lực thi hành kể từ ngày 01 tháng 11 năm 2026 đến hết ngày 31 tháng 12 năm 2030.</span></p>
+    <p class="prov-clause" data-block-id="" data-node-id="" id="5425b1bc-5c74-4b83-8c36-d8a0fb9686b8" style="text-align: justify; margin: 4.0pt 0 4.0pt"><span style="font-size: 14.0pt">2. Trường hợp các văn bản được dẫn chiếu để áp dụng tại Quyết định này được sửa đổi, bổ sung hoặc thay thế thì áp dụng theo văn bản sửa đổi, bổ sung hoặc thay thế đó.</span></p>
+    <p class="prov-clause" data-block-id="" data-node-id="" id="39af5a71-357c-4e45-a2d7-c3672ac69369" style="text-align: justify; margin: 4.0pt 0 4.0pt"><span style="font-size: 14.0pt">3. Chánh Văn phòng Ủy ban nhân dân thành phố; Thủ trưởng các Sở, Ban, ngành, Hội, đoàn thể thành phố; Chủ tịch Ủy ban nhân dân xã và Thủ trưởng các đơn vị, cá nhân có liên quan chịu trách nhiệm thi hành Quyết định này./.</span></p>
+    <p>&nbsp;</p>
+    <table border="0" class="prov-table" style="border-collapse: collapse; width: 100%; margin: 15px 0;">
+     <tbody>
+      <tr>
+       <td style="padding: 8px;">
+        <p style="text-align: justify; margin: 6.0pt 0 0pt"><span style="font-size: 12.0pt"><strong><em>Nơi nhận:</em></strong></span></p>
+        <p style="text-align: justify; margin: 0pt 0 0pt"><span style="font-size: 11.0pt">- Bộ Nông nghiệp và Môi trường;</span></p>
+        <p style="text-align: justify; margin: 0pt 0 0pt"><span style="font-family: 'TimesNewRomanPSMT;Times New Roman', serif; font-size: 11.0pt">- Cục KTVB và TCTHPL-Bộ Tư pháp;</span></p>
+        <p style="text-align: justify; margin: 0pt 0 0pt"><span style="font-size: 11.0pt">- Thường trực: Thành ủy, HĐND thành phố;</span></p>
+        <p style="text-align: justify; margin: 0pt 0 0pt"><span style="font-size: 11.0pt">- Ủy ban MTTQ Việt Nam thành phố;</span></p>
+        <p style="text-align: justify; margin: 0pt 0 0pt"><span style="font-size: 11.0pt">- Chủ tịch, các Phó Chủ tịch UBND thành phố;</span></p>
+        <p style="text-align: justify; margin: 0pt 0 0pt"><span style="font-size: 11.0pt">- Các Sở, ban, ngành, đoàn thể;</span></p>
+        <p style="text-align: justify; margin: 0pt 0 0pt"><span style="font-size: 11.0pt">- Đoàn ĐBQH thành phố;</span></p>
+        <p style="text-align: justify; margin: 0pt 0 0pt"><span style="font-size: 11.0pt">- Đảng ủy, HĐND, UBND xã;</span></p>
+        <p style="text-align: justify; margin: 0pt 0 0pt"><span style="font-size: 11.0pt">- Báo và PTTH Đà Nẵng, Cổng Thông tin điện tử, Công báo thành phố;</span></p>
+        <p style="text-align: justify; margin: 0pt 0 0pt"><span style="font-size: 11.0pt">- Lưu: VT, TH, KT, NC, KGVX, SNNMT</span><span style="font-size: 13.0pt">.</span></p></td>
+       <td style="padding: 8px;">
+        <p style="text-align: center; margin: 0pt 0 0pt"><span style="font-size: 14.0pt"><strong>TM. ỦY BAN NHÂN DÂN</strong></span></p>
+        <p style="text-align: center; margin: 0pt 0 0pt"><span style="font-size: 14.0pt"><strong>KT. CHỦ TỊCH</strong></span></p>
+        <p style="text-align: center; margin: 0pt 0 0pt"><span style="font-size: 14.0pt"><strong>PHÓ CHỦ TỊCH</strong></span></p>
+        <p>&nbsp;</p>
+        <p>&nbsp;</p>
+        <p style="text-align: center; margin: 0pt 0 0pt"><span style="font-size: 14.0pt"><strong>Trần Nam Hưng</strong></span></p></td>
+      </tr>
+     </tbody>
+    </table>
+    <p style="text-align: center; margin: 0pt 0 0pt"><span style="font-size: 14.0pt"><strong>Phụ lục</strong></span></p>
+    <p style="text-align: center; margin: 0pt 0 0pt"><span style="font-size: 14.0pt"><em>(Ban hành kèm theo Quyết định số 148/2026/QĐ-UBND ngày 14 tháng 10 năm 2026 của UBND thành phố Đà Nẵng)</em></span></p>
+    <p>&nbsp;</p>
+    <p>&nbsp;</p>
+    <table border="1" class="prov-table" style="border-collapse: collapse; width: 100%; margin: 15px 0;">
+     <tbody>
+      <tr>
+       <td rowspan="2" style="vertical-align: middle; padding: 8px;">
+        <p>&nbsp;</p>
+        <p style="text-align: center; margin: 0pt 0 0pt"><span style="font-size: 14.0pt"><strong>TT</strong></span></p>
+        <p>&nbsp;</p></td>
+       <td rowspan="2" style="vertical-align: middle; padding: 8px;">
+        <p>&nbsp;</p>
+        <p style="text-align: center; margin: 0pt 0 0pt"><span style="font-size: 14.0pt"><strong>Tên tiêu chí</strong></span></p>
+        <p>&nbsp;</p></td>
+       <td rowspan="2" style="vertical-align: middle; padding: 8px;">
+        <p style="text-align: center; margin: 0pt 0 0pt"><span style="font-size: 14.0pt"><strong>Nội dung tiêu chí</strong></span></p></td>
+       <td colspan="3" style="vertical-align: middle; padding: 8px;">
+        <p style="text-align: center; margin: 0pt 0 0pt"><span style="font-size: 14.0pt"><strong>Yêu cầu đạt</strong> <strong>chuẩn</strong></span></p></td>
+       <td rowspan="2" style="vertical-align: middle; padding: 8px;">
+        <p style="text-align: center; margin: 0pt 0 0pt"><span style="font-size: 14.0pt"><strong>Nội dung, văn bản áp dụng, đánh giá</strong></span></p></td>
+      </tr>
+      <tr>
+       <td style="vertical-align: middle; padding: 8px;">
+        <p style="text-align: center; margin: 3.0pt 0 3.0pt"><span style="font-size: 14.0pt"><strong>Thôn thuộc </strong></span></p>
+        <p style="text-align: center; margin: 3.0pt 0 3.0pt"><span style="font-size: 14.0pt"><strong>xã nhóm 1</strong></span></p></td>
+       <td style="vertical-align: middle; padding: 8px;">
+        <p style="text-align: center; margin: 3.0pt 0 3.0pt"><span style="font-size: 14.0pt"><strong>Thôn thuộc </strong></span></p>
+        <p style="text-align: center; margin: 3.0pt 0 3.0pt"><span style="font-size: 14.0pt"><strong>xã nhóm 2</strong></span></p></td>
+       <td style="vertical-align: middle; padding: 8px;">
+        <p style="text-align: center; margin: 3.0pt 0 3.0pt"><span style="font-size: 14.0pt"><strong>Thôn thuộc</strong></span></p>
+        <p style="text-align: center; margin: 3.0pt 0 3.0pt"><span style="font-size: 14.0pt"><strong>xã nhóm 3</strong></span></p></td>
+      </tr>
+      <tr>
+       <td rowspan="4" style="vertical-align: middle; padding: 8px;">
+        <p style="text-align: center; margin: 3.0pt 0 3.0pt"><span style="font-size: 14.0pt">1</span></p></td>
+       <td rowspan="4" style="vertical-align: middle; padding: 8px;">
+        <p>&nbsp;</p>
+        <p style="text-align: justify; margin: 3.0pt 0 3.0pt"><span style="font-size: 14.0pt">Hạ tầng kinh tế - xã hội</span></p>
+        <p>&nbsp;</p></td>
+       <td style="vertical-align: middle; padding: 8px;">
+        <p style="text-align: justify; margin: 8.0pt 0 8.0pt"><span style="font-size: 14.0pt">1.1. Hệ thống đường giao thông nông thôn trên địa bàn thôn theo quy hoạch đảm bảo kết nối và được bảo trì hằng năm; 100% đường thôn, ngõ, xóm được cứng hóa (bê tông hóa hoặc nhựa hóa); cắm mốc đầy đủ hành lang đường trục chính thôn theo quy hoạch; có biển báo giao thông đầu các đường thôn (biển báo hạn chế tải trọng xe, biển chỉ dẫn).</span><span style="font-family: 'Times New Roman', serif; font-size: 14.0pt"> </span><span style="font-size: 14.0pt">Có tối thiểu 60% số km đường thôn được trồng cây xanh dọc tuyến đường</span><sup class="footnote-ref"><em>[2]</em></sup></p></td>
+       <td style="vertical-align: middle; padding: 8px;">
+        <p style="text-align: center; margin: 8.0pt 0 8.0pt"><span style="font-size: 14.0pt">Đạt </span></p></td>
+       <td style="vertical-align: middle; padding: 8px;">
+        <p style="text-align: center; margin: 8.0pt 0 8.0pt"><span style="font-size: 14.0pt">Đạt</span></p></td>
+       <td style="vertical-align: middle; padding: 8px;">
+        <p style="text-align: center; margin: 8.0pt 0 8.0pt"><span style="font-size: 14.0pt">Đạt</span></p></td>
+       <td style="vertical-align: middle; padding: 8px;">
+        <p style="text-align: justify; margin: 3.0pt 0 3.0pt"><span style="font-size: 14.0pt">Điều 6 Thông tư số <a href="/van-ban/chi-tiet/de075fe0-505a-11f1-95e6-7f86995e26de" target="_blank" rel="noopener noreferrer">10/2026/TT-BXD</a> ngày 31/3/2026 của Bộ trưởng Bộ Xây dựng</span></p></td>
+      </tr>
+      <tr>
+       <td style="vertical-align: middle; padding: 8px;">
+        <p style="text-align: justify; margin: 6.0pt 0 6.0pt"><span style="font-size: 14.0pt">1.2. Tỷ lệ hộ trên địa bàn thôn có đăng ký trực tiếp và được sử dụng điện sinh hoạt, sản xuất đảm bảo an toàn, tin cậy và ổn định</span></p></td>
+       <td style="vertical-align: middle; padding: 8px;">
+        <p style="text-align: center; margin: 6.0pt 0 6.0pt"><span style="font-size: 14.0pt">≥99%</span></p></td>
+       <td style="vertical-align: middle; padding: 8px;">
+        <p style="text-align: center; margin: 6.0pt 0 6.0pt"><span style="font-size: 14.0pt">≥99%</span></p></td>
+       <td style="vertical-align: middle; padding: 8px;">
+        <p style="text-align: center; margin: 6.0pt 0 6.0pt"><span style="font-size: 14.0pt">≥98%</span></p></td>
+       <td style="vertical-align: middle; padding: 8px;">
+        <p style="text-align: justify; margin: 3.0pt 0 3.0pt"><span style="font-size: 14.0pt">Điều 5 Thông tư số <a href="/van-ban/chi-tiet/187839" target="_blank" rel="noopener noreferrer">17/2026/TT-BCT</a> ngày 31/3/2026 của Bộ trưởng Bộ Công Thương</span></p></td>
+      </tr>
+      <tr>
+       <td style="vertical-align: middle; padding: 8px;">
+        <p style="text-align: justify; margin: 6.0pt 0 6.0pt"><span style="color: #000000; font-family: 'Times New Roman', serif; font-size: 14.0pt">1.3. Diện tích đất sản xuất nông nghiệp trên địa bàn thôn được tưới và tiêu nước chủ động</span></p></td>
+       <td style="vertical-align: middle; padding: 8px;">
+        <p style="text-align: center; margin: 6.0pt 0 6.0pt"><span style="font-size: 14.0pt">≥90%</span></p></td>
+       <td style="vertical-align: middle; padding: 8px;">
+        <p style="text-align: center; margin: 6.0pt 0 6.0pt"><span style="color: #000000; font-family: 'Times New Roman', serif; font-size: 14.0pt">≥80%</span></p></td>
+       <td style="vertical-align: middle; padding: 8px;">
+        <p style="text-align: justify; margin: 6.0pt 0 6.0pt"><span style="color: #000000; font-family: 'Times New Roman', serif; font-size: 14.0pt">Diện tích đất sản xuất nông nghiệp được tưới và tiêu nước chủ động phù</span><span style="font-size: 14.0pt"> </span><span style="color: #000000; font-family: 'Times New Roman', serif; font-size: 14.0pt">hợp với điều kiện địa hình, thủy văn, tập quán canh tác địa phương</span></p></td>
+       <td style="vertical-align: middle; padding: 8px;">
+        <p style="text-align: justify; margin: 3.0pt 0 3.0pt"><span style="font-size: 14.0pt">Điều 4 Thông tư số 14/2026/TT-BNNMT ngày 27/02/2026 của Bộ trưởng Bộ Nông nghiệp và Môi trường</span></p></td>
+      </tr>
+      <tr>
+       <td style="vertical-align: middle; padding: 8px;">
+        <p style="text-align: justify; margin: 6.0pt 0 6.0pt"><span style="color: #000000; font-family: 'TimesNewRomanPS-BoldMT;Times New Roman', serif; font-size: 14.0pt"><strong>1.4. Thôn có hạ tầng viễn thông đảm bảo phủ sóng, internet đến 100% khu dân cư nông thôn, vùng sản xuất</strong></span></p></td>
+       <td colspan="3" style="vertical-align: middle; padding: 8px;">
+        <p style="text-align: justify; margin: 6.0pt 0 6.0pt"><span style="color: #000000; font-family: 'TimesNewRomanPS-BoldMT;Times New Roman', serif; font-size: 14.0pt"><strong>- Địa bàn thôn có khả năng tiếp cận, sử dụng ít nhất một trong hai loại dịch vụ điện thoại trên mạng viễn thông cố định mặt đất hoặc trên mạng viễn thông di động mặt đất và ít nhất một trong hai loại dịch vụ truy nhập Internet trên mạng băng rộng cố định mặt đất hoặc trên mạng băng rộng di động mặt đất</strong></span></p>
+        <p style="text-align: justify; margin: 6.0pt 0 6.0pt"><span style="color: #000000; font-family: 'TimesNewRomanPS-BoldMT;Times New Roman', serif; font-size: 14.0pt"><strong>- Dịch vụ viễn thông, Internet hiện có trên địa bàn thôn phải đáp ứng quy chuẩn kỹ thuật quốc gia do cơ quan có thẩm quyền ban hành</strong></span></p></td>
+       <td style="vertical-align: middle; padding: 8px;">
+        <p style="text-align: justify; margin: 3.0pt 0 3.0pt"><span style="color: #000000; font-family: 'TimesNewRomanPS-BoldMT;Times New Roman', serif; font-size: 14.0pt"><strong>Hướng dẫn số 3781/HD-BKHCN ngày 01/6/2026 của Bộ Khoa học và Công nghệ</strong></span></p></td>
+      </tr>
+      <tr>
+       <td rowspan="4" style="vertical-align: middle; padding: 8px;">
+        <p style="text-align: center; margin: 3.0pt 0 3.0pt"><span style="font-size: 14.0pt">2</span></p></td>
+       <td rowspan="4" style="vertical-align: middle; padding: 8px;">
+        <p style="text-align: center; margin: 3.0pt 0 3.0pt"><span style="font-size: 14.0pt">Phát triển kinh tế nông thôn</span></p></td>
+       <td style="vertical-align: middle; padding: 8px;">
+        <p style="text-align: justify; margin: 2.0pt 0 2.0pt"><span style="font-size: 14.0pt">2.1. Thôn có ít nhất 01 mô hình nông nghiệp ứng dụng công nghệ cao hoặc mô hình kinh tế xanh hoặc mô hình kinh tế tuần hoàn hiệu quả</span></p></td>
+       <td style="vertical-align: middle; padding: 8px;">
+        <p style="text-align: center; margin: 2.0pt 0 2.0pt"><span style="font-size: 14.0pt">Đạt</span></p></td>
+       <td style="vertical-align: middle; padding: 8px;">
+        <p style="text-align: center; margin: 2.0pt 0 2.0pt"><span style="font-size: 14.0pt">Đạt</span></p></td>
+       <td style="vertical-align: middle; padding: 8px;">
+        <p style="text-align: center; margin: 2.0pt 0 2.0pt"><span style="font-size: 14.0pt">Đạt</span></p></td>
+       <td style="vertical-align: middle; padding: 8px;">
+        <p style="text-align: justify; margin: 3.0pt 0 3.0pt"><span style="font-size: 14.0pt">Điều 10, Điều 11 và Điều 12 Thông tư số 14/2026/TT-BNNMT ngày 27/02/2026 của Bộ trưởng Bộ Nông nghiệp và Môi trường </span></p></td>
+      </tr>
+      <tr>
+       <td style="vertical-align: middle; padding: 8px;">
+        <p style="text-align: justify; margin: 2.0pt 0 2.0pt"><span style="font-size: 14.0pt">2.2. Thôn có ít nhất 01 sản phẩm OCOP được công nhận đạt 3 sao trở lên còn thời hạn hoặc có ít nhất 01 sản phẩm nông nghiệp, nông thôn, làng nghề đặc trưng, đặc hữu thực hiện hiệu quả trong năm đánh giá</span></p></td>
+       <td style="vertical-align: middle; padding: 8px;">
+        <p style="text-align: center; margin: 2.0pt 0 2.0pt"><span style="font-size: 14.0pt">Đạt</span></p></td>
+       <td style="vertical-align: middle; padding: 8px;">
+        <p style="text-align: center; margin: 2.0pt 0 2.0pt"><span style="font-size: 14.0pt">Đạt</span></p></td>
+       <td style="vertical-align: middle; padding: 8px;">
+        <p style="text-align: center; margin: 2.0pt 0 2.0pt"><span style="font-size: 14.0pt">Đạt</span></p></td>
+       <td style="vertical-align: middle; padding: 8px;">
+        <p style="text-align: justify; margin: 3.0pt 0 3.0pt"><span style="font-size: 14.0pt">Quyết định công nhận sản phẩm OCOP đạt 3 sao trở lên; báo cáo đánh giá sản phẩm nông nghiệp, nông thôn, làng nghề đặc trưng, đặc hữu thực hiện hiệu quả (có lãi trong năm đánh giá)</span></p></td>
+      </tr>
+      <tr>
+       <td style="vertical-align: middle; padding: 8px;">
+        <p style="text-align: justify; margin: 2.0pt 0 2.0pt"><span style="font-size: 14.0pt">2.3. Tỷ lệ hộ nông dân sản xuất, kinh doanh giỏi theo quy định trên địa bàn thôn</span></p></td>
+       <td style="vertical-align: middle; padding: 8px;">
+        <p style="text-align: center; margin: 2.0pt 0 2.0pt"><span style="font-size: 14.0pt">≥65%</span></p></td>
+       <td style="vertical-align: middle; padding: 8px;">
+        <p style="text-align: center; margin: 2.0pt 0 2.0pt"><span style="font-size: 14.0pt">≥55%</span></p></td>
+       <td style="vertical-align: middle; padding: 8px;">
+        <p style="text-align: center; margin: 2.0pt 0 2.0pt"><span style="font-size: 14.0pt">≥40%</span></p></td>
+       <td style="vertical-align: middle; padding: 8px;">
+        <p style="text-align: justify; margin: 3.0pt 0 3.0pt"><span style="font-size: 14.0pt">Hướng dẫn số 286-HD/HNDTW ngày 24/3/2026 của Ban Chấp hành Trung ương Hội Nông dân Việt Nam</span></p></td>
+      </tr>
+      <tr>
+       <td style="vertical-align: middle; padding: 8px;">
+        <p style="text-align: justify; margin: 12.0pt 0 12.0pt"><span style="font-size: 14.0pt">2.4. Tỷ lệ hộ có vườn (vườn liền thửa từ 1.000 m</span><span style="vertical-align: super; font-size: 9.1pt">2</span><span style="font-size: 14.0pt"> trở lên) được chỉnh trang, cải tạo (vườn cải tạo hợp lý, loại bỏ cây tạp, tạo cảnh quan xanh, sạch, đẹp; lựa chọn các loại cây trồng phù hợp với định hướng phát triển sản xuất nông nghiệp, cơ cấu lại nông nghiệp của xã)</span></p></td>
+       <td style="vertical-align: middle; padding: 8px;">
+        <p style="text-align: center; margin: 12.0pt 0 12.0pt"><span style="font-size: 14.0pt">≥ 95%</span></p></td>
+       <td style="vertical-align: middle; padding: 8px;">
+        <p style="text-align: center; margin: 12.0pt 0 12.0pt"><span style="font-size: 14.0pt">≥ 90%</span></p></td>
+       <td style="vertical-align: middle; padding: 8px;">
+        <p style="text-align: center; margin: 12.0pt 0 12.0pt"><span style="font-size: 14.0pt">≥ 85%</span></p></td>
+       <td style="vertical-align: middle; padding: 8px;">
+        <p style="text-align: justify; margin: 12.0pt 0 12.0pt"><span style="font-size: 14.0pt">Báo cáo và đánh giá thực tế</span></p></td>
+      </tr>
+      <tr>
+       <td rowspan="2" style="vertical-align: middle; padding: 8px;">
+        <p style="text-align: center; margin: 3.0pt 0 3.0pt"><span style="font-size: 14.0pt">3</span></p></td>
+       <td rowspan="2" style="vertical-align: middle; padding: 8px;">
+        <p style="text-align: center; margin: 3.0pt 0 3.0pt"><span style="font-size: 14.0pt">Đào tạo nguồn nhân lực nông thôn</span></p></td>
+       <td style="vertical-align: middle; padding: 8px;">
+        <p style="text-align: justify; margin: 12.0pt 0 12.0pt"><span style="font-size: 14.0pt">3.1. Tỷ lệ lao động qua đào tạo trên địa bàn thôn có bằng cấp, chứng chỉ</span></p></td>
+       <td style="vertical-align: middle; padding: 8px;">
+        <p style="text-align: center; margin: 12.0pt 0 12.0pt"><span style="font-size: 14.0pt">≥45%</span></p></td>
+       <td style="vertical-align: middle; padding: 8px;">
+        <p style="text-align: center; margin: 12.0pt 0 12.0pt"><span style="font-size: 14.0pt">≥40%</span></p></td>
+       <td style="vertical-align: middle; padding: 8px;">
+        <p style="text-align: center; margin: 12.0pt 0 12.0pt"><span style="font-size: 14.0pt">≥30%</span></p></td>
+       <td style="vertical-align: middle; padding: 8px;">
+        <p style="text-align: justify; margin: 12.0pt 0 12.0pt"><span style="font-size: 14.0pt">Công văn số 2558/BNV-CTTN&amp;BĐG ngày 20/3/2026 của Bộ Nội vụ </span></p></td>
+      </tr>
+      <tr>
+       <td style="vertical-align: middle; padding: 8px;">
+        <p style="text-align: justify; margin: 12.0pt 0 12.0pt"><span style="font-size: 14.0pt">3.2. Tỷ lệ người trong độ tuổi trên địa bàn thôn theo học các trình độ sau trung học phổ thông</span></p></td>
+       <td style="vertical-align: middle; padding: 8px;">
+        <p style="text-align: center; margin: 12.0pt 0 12.0pt"><span style="font-size: 14.0pt">≥ 65%</span></p></td>
+       <td style="vertical-align: middle; padding: 8px;">
+        <p style="text-align: center; margin: 12.0pt 0 12.0pt"><span style="font-size: 14.0pt">≥ 55%</span></p></td>
+       <td style="vertical-align: middle; padding: 8px;">
+        <p style="text-align: center; margin: 12.0pt 0 12.0pt"><span style="font-size: 14.0pt">≥ 45%</span></p></td>
+       <td style="vertical-align: middle; padding: 8px;">
+        <p style="text-align: justify; margin: 12.0pt 0 12.0pt"><span style="font-size: 14.0pt">Thông tư số <a href="/van-ban/chi-tiet/e6a2dd20-60bb-11f1-adfb-b3c7a20e7cb7" target="_blank" rel="noopener noreferrer">42/2026/TT-BGDĐT</a> ngày 29/5/2026 của Bộ trưởng Bộ Giáo dục và Đào tạo</span></p></td>
+      </tr>
+      <tr>
+       <td rowspan="3" style="vertical-align: middle; padding: 8px;">
+        <p style="text-align: center; margin: 3.0pt 0 3.0pt"><span style="font-size: 14.0pt">4</span></p></td>
+       <td rowspan="3" style="vertical-align: middle; padding: 8px;">
+        <p style="text-align: justify; margin: 3.0pt 0 3.0pt"><span style="font-size: 14.0pt">Văn hóa, Giáo dục, Y tế</span></p></td>
+       <td style="vertical-align: middle; padding: 8px;">
+        <p style="text-align: justify; margin: 3.0pt 0 3.0pt"><span style="font-size: 14.0pt">4.1. Văn hóa</span></p></td>
+       <td colspan="3" style="vertical-align: middle; padding: 8px;">
+        <p style="text-align: justify; margin: 3.0pt 0 3.0pt"><span style="font-size: 14.0pt">- Thôn có Nhà văn hóa (hoặc nhà làng truyền thống), khu thể thao đạt chuẩn theo quy định. Nhà văn hóa thôn có đầy đủ bàn ghế ngồi, trang trí khánh tiết, hệ thống âm thanh, ánh sáng và các trang thiết bị khác đảm bảo sinh hoạt văn hóa, văn nghệ. Khu thể thao thôn có một số dụng cụ luyện tập thể thao phù hợp với phong trào thể thao ở địa phương</span></p>
+        <p style="text-align: justify; margin: 3.0pt 0 3.0pt"><span style="font-size: 14.0pt">- Có ít nhất 01 địa điểm lắp đặt dụng cụ thể dục, thể thao ngoài trời và thiết bị vui chơi, giải trí cho trẻ em</span></p>
+        <p style="text-align: justify; margin: 3.0pt 0 3.0pt"><span style="font-size: 14.0pt">- Thôn có mô hình thư viện cộng đồng hoặc thư viện tư nhân đảm bảo theo quy định</span></p>
+        <p style="text-align: justify; margin: 3.0pt 0 3.0pt"><span style="font-size: 14.0pt">- Thôn có ít nhất 01 câu lạc bộ văn hóa, nghệ thuật và 01 câu lạc bộ thể dục, thể thao hoạt động thường xuyên</span></p>
+        <p style="text-align: justify; margin: 3.0pt 0 3.0pt"><span style="font-size: 14.0pt">- 40% hộ gia đình và 50% người dân trên địa bàn thôn tham gia tập luyện thể dục, thể thao thường xuyên</span></p>
+        <p style="text-align: justify; margin: 3.0pt 0 3.0pt"><span style="font-size: 14.0pt">- Thôn có cụm thu phát thanh ứng dụng công nghệ thông tin - viễn thông hoạt động và kết nối với hệ thống thông tin nguồn thành phố</span></p>
+        <p style="text-align: justify; margin: 3.0pt 0 3.0pt"><span style="font-size: 14.0pt">- Thôn có hương ước được xây dựng và thực hiện theo quy định pháp luật, có nội dung giáo dục đạo đức, lối sống, hệ giá trị gia đình</span></p>
+        <p style="text-align: justify; margin: 3.0pt 0 3.0pt"><span style="font-size: 14.0pt">- Thôn có ít nhất 01 mô hình phòng, chống bạo lực gia đình hoạt động hiệu quả</span></p>
+        <p style="text-align: justify; margin: 3.0pt 0 3.0pt"><span style="font-size: 14.0pt">- Thôn đạt thôn văn hóa trong năm đánh giá</span></p></td>
+       <td style="vertical-align: middle; padding: 8px;">
+        <p>&nbsp;</p>
+        <p style="text-align: justify; margin: 3.0pt 0 3.0pt"><span style="font-size: 14.0pt">Hướng dẫn số 1984/HD-BVHTTDL ngày 14/4/2026 của Bộ Văn hóa, Thể thao và Du lịch</span></p></td>
+      </tr>
+      <tr>
+       <td style="vertical-align: middle; padding: 8px;">
+        <p style="text-align: justify; margin: 3.0pt 0 3.0pt"><span style="font-size: 14.0pt">4.2. Giáo dục</span></p></td>
+       <td style="vertical-align: middle; padding: 8px;">
+        <p style="text-align: justify; margin: 3.0pt 0 3.0pt"><span style="font-size: 14.0pt">- Tỷ lệ người trong độ tuổi hoàn thành cấp trung học phổ thông và tương đương: </span><span style="color: #000000; font-family: 'TimesNewRomanPS-BoldMT;Times New Roman', serif; font-size: 14.0pt"><strong>≥95%</strong></span></p>
+        <p style="text-align: justify; margin: 3.0pt 0 3.0pt"><span style="font-size: 14.0pt">- Tỷ lệ học sinh hoàn thành trung học cơ sở được tiếp tục học trung học phổ thông và các trình độ khác: </span><span style="color: #000000; font-family: 'TimesNewRomanPS-BoldMT;Times New Roman', serif; font-size: 14.0pt"><strong>≥95%</strong></span><span style="font-size: 14.0pt"> </span></p>
+        <p style="text-align: justify; margin: 3.0pt 0 3.0pt"><span style="font-size: 14.0pt">- Giáo dục bắt buộc hết trung học cơ sở: Đạt</span></p>
+        <p style="text-align: justify; margin: 3.0pt 0 3.0pt"><span style="font-size: 14.0pt">- Thôn có xây dựng quỹ khuyến học và quản lý, sử dụng tốt quỹ khuyến học</span></p></td>
+       <td style="vertical-align: middle; padding: 8px;">
+        <p style="text-align: justify; margin: 3.0pt 0 3.0pt"><span style="font-size: 14.0pt">- Tỷ lệ người trong độ tuổi hoàn thành cấp trung học phổ thông và tương đương: </span><span style="color: #000000; font-family: 'TimesNewRomanPS-BoldMT;Times New Roman', serif; font-size: 14.0pt"><strong>≥90%</strong></span></p>
+        <p style="text-align: justify; margin: 3.0pt 0 3.0pt"><span style="font-size: 14.0pt">- Tỷ lệ học sinh hoàn thành trung học cơ sở được tiếp tục học trung học phổ thông và các trình độ khác: </span><span style="color: #000000; font-family: 'TimesNewRomanPS-BoldMT;Times New Roman', serif; font-size: 14.0pt"><strong>≥90%</strong></span><span style="font-size: 14.0pt"> </span></p>
+        <p style="text-align: justify; margin: 3.0pt 0 3.0pt"><span style="font-size: 14.0pt">- Giáo dục bắt buộc hết trung học cơ sở: Đạt</span></p>
+        <p style="text-align: justify; margin: 3.0pt 0 3.0pt"><span style="font-size: 14.0pt">- Thôn có xây dựng quỹ khuyến học và quản lý, sử dụng tốt quỹ khuyến học</span></p></td>
+       <td style="vertical-align: middle; padding: 8px;">
+        <p style="text-align: justify; margin: 3.0pt 0 3.0pt"><span style="font-size: 14.0pt">- Tỷ lệ người trong độ tuổi hoàn thành cấp trung học phổ thông và tương đương: </span><span style="color: #000000; font-family: 'TimesNewRomanPS-BoldMT;Times New Roman', serif; font-size: 14.0pt"><strong>≥85%</strong></span></p>
+        <p style="text-align: justify; margin: 3.0pt 0 3.0pt"><span style="font-size: 14.0pt">- Tỷ lệ học sinh hoàn thành trung học cơ sở được tiếp tục học trung học phổ thông và các trình độ khác: </span><span style="color: #000000; font-family: 'TimesNewRomanPS-BoldMT;Times New Roman', serif; font-size: 14.0pt"><strong>≥85%</strong></span><span style="font-size: 14.0pt"> </span></p>
+        <p style="text-align: justify; margin: 3.0pt 0 3.0pt"><span style="font-size: 14.0pt">- Giáo dục bắt buộc hết trung học cơ sở: Đạt</span></p>
+        <p style="text-align: justify; margin: 3.0pt 0 3.0pt"><span style="font-size: 14.0pt">- Thôn có xây dựng quỹ khuyến học và quản lý, sử dụng tốt quỹ khuyến học</span></p></td>
+       <td style="vertical-align: middle; padding: 8px;">
+        <p style="text-align: justify; margin: 3.0pt 0 3.0pt"><span style="font-size: 14.0pt">Thông tư số <a href="/van-ban/chi-tiet/e6a2dd20-60bb-11f1-adfb-b3c7a20e7cb7" target="_blank" rel="noopener noreferrer">42/2026/TT-BGDĐT</a> ngày 29/5/2026 của Bộ trưởng Bộ Giáo dục và Đào tạo</span></p></td>
+      </tr>
+      <tr>
+       <td style="vertical-align: middle; padding: 8px;">
+        <p style="text-align: justify; margin: 3.0pt 0 3.0pt"><span style="font-size: 14.0pt">4.3. Y tế</span></p></td>
+       <td colspan="3" style="vertical-align: middle; padding: 8px;">
+        <p style="text-align: justify; margin: 0pt 0 0pt"><span style="font-size: 14.0pt">- Có tối thiểu 01 nhân viên y tế thôn được đào tạo theo khung chương trình do Bộ Y tế quy định; được cấp túi y tế thôn theo quy định; thường xuyên hoạt động theo chức năng, nhiệm vụ</span></p>
+        <p style="text-align: justify; margin: 0pt 0 0pt"><span style="font-size: 14.0pt">- Không để xảy ra vụ ngộ độc thực phẩm</span><sup class="footnote-ref"><em>[3]</em></sup><span style="font-size: 14.0pt"> trên địa bàn thôn trong năm đánh giá</span></p>
+        <p style="text-align: justify; margin: 0pt 0 0pt"><span style="font-size: 14.0pt">- Tỷ lệ người dân trên địa bàn thôn tham gia Bảo hiểm y tế: Năm 2026 ≥ 95,07%; năm 2027 ≥ 96,30%; năm 2028 ≥ 97,54%; năm 2029 ≥ 98,77%; năm 2030: 100%</span></p></td>
+       <td style="vertical-align: middle; padding: 8px;">
+        <p style="text-align: justify; margin: 3.0pt 0 3.0pt"><span style="font-size: 14.0pt">Báo cáo và đánh giá thực tế</span></p></td>
+      </tr>
+      <tr>
+       <td rowspan="5" style="vertical-align: middle; padding: 8px;">
+        <p style="text-align: center; margin: 3.0pt 0 3.0pt"><span style="font-size: 14.0pt">5</span></p></td>
+       <td rowspan="5" style="vertical-align: middle; padding: 8px;">
+        <p style="text-align: center; margin: 0pt 0 0pt"><span style="font-size: 14.0pt">Giảm nghèo và An sinh xã hội</span></p></td>
+       <td style="vertical-align: middle; padding: 8px;">
+        <p style="text-align: justify; margin: 3.0pt 0 3.0pt"><span style="font-size: 14.0pt">5.1. Tỷ lệ nghèo đa chiều trên địa bàn thôn</span></p></td>
+       <td style="vertical-align: middle; padding: 8px;">
+        <p style="text-align: center; margin: 3.0pt 0 3.0pt"><span style="font-size: 14.0pt">≤1%</span></p></td>
+       <td style="vertical-align: middle; padding: 8px;">
+        <p style="text-align: center; margin: 3.0pt 0 3.0pt"><span style="font-size: 14.0pt">≤3%</span></p></td>
+       <td style="vertical-align: middle; padding: 8px;">
+        <p style="text-align: center; margin: 3.0pt 0 3.0pt"><span style="font-size: 14.0pt">≤10%</span></p></td>
+       <td style="vertical-align: middle; padding: 8px;">
+        <p style="text-align: justify; margin: 3.0pt 0 3.0pt"><span style="font-size: 14.0pt">Điều 22 Thông tư số 14/2026/TT-BNNMT ngày 27/02/2026 của Bộ trưởng Bộ Nông nghiệp và Môi trường</span></p></td>
+      </tr>
+      <tr>
+       <td style="vertical-align: middle; padding: 8px;">
+        <p style="text-align: justify; margin: 3.0pt 0 3.0pt"><span style="font-size: 14.0pt">5.2. Tỷ lệ hộ trên địa bàn thôn có nhà ở kiên cố </span></p></td>
+       <td style="vertical-align: middle; padding: 8px;">
+        <p style="text-align: center; margin: 3.0pt 0 3.0pt"><span style="font-size: 14.0pt">≥95%</span></p></td>
+       <td style="vertical-align: middle; padding: 8px;">
+        <p style="text-align: center; margin: 3.0pt 0 3.0pt"><span style="font-size: 14.0pt">≥85%</span></p></td>
+       <td style="vertical-align: middle; padding: 8px;">
+        <p style="text-align: center; margin: 3.0pt 0 3.0pt"><span style="font-size: 14.0pt">≥75%</span></p></td>
+       <td style="vertical-align: middle; padding: 8px;">
+        <p style="text-align: justify; margin: 3.0pt 0 3.0pt"><span style="font-size: 14.0pt">Điều 7 Thông tư số <a href="/van-ban/chi-tiet/de075fe0-505a-11f1-95e6-7f86995e26de" target="_blank" rel="noopener noreferrer">10/2026/TT-BXD</a> ngày 31/3/2026 của Bộ trưởng Bộ Xây dựng</span></p></td>
+      </tr>
+      <tr>
+       <td style="vertical-align: middle; padding: 8px;">
+        <p style="text-align: justify; margin: 12.0pt 0 12.0pt"><span style="font-size: 14.0pt">5.3. Tỷ lệ hộ trên địa bàn thôn được sử dụng nước sạch theo quy chuẩn</span></p></td>
+       <td colspan="3" style="vertical-align: middle; padding: 8px;">
+        <p style="text-align: justify; margin: 6.0pt 0 12.0pt"><span style="font-size: 14.0pt">- Đối với thôn thuộc xã nhóm 1: Tỷ lệ hộ được sử dụng nước sạch theo quy chuẩn ≥80% (trong đó tỷ lệ hộ được sử dụng nước sạch theo quy chuẩn từ công trình cấp nước tập trung ≥ 25%).</span></p>
+        <p style="text-align: justify; margin: 12.0pt 0 12.0pt"><span style="font-size: 14.0pt">- Đối với thôn thuộc xã nhóm 2: Tỷ lệ hộ được sử dụng nước sạch theo quy chuẩn ≥70% (trong đó tỷ lệ hộ được sử dụng nước sạch theo quy chuẩn từ công trình cấp nước tập trung ≥ 20%).</span></p>
+        <p style="text-align: justify; margin: 12.0pt 0 12.0pt"><span style="font-size: 14.0pt">- Đối với thôn thuộc xã nhóm 3: Tỷ lệ hộ được sử dụng nước sạch theo quy chuẩn ≥40% (bao gồm tỷ lệ hộ sử dụng nước sạch từ công trình cấp nước hộ gia đình và công trình cấp nước tập trung (nếu có).</span></p>
+        <p style="text-align: justify; margin: 12.0pt 0 12.0pt"><span style="font-size: 14.0pt">Trường hợp thôn (thuộc 3 nhóm xã) không sử dụng nước từ công trình cấp nước sạch tập trung thì chỉ đánh giá tỷ lệ hộ trên địa bàn thôn sử dụng nước sạch quy mô hộ gia đình</span></p></td>
+       <td style="vertical-align: middle; padding: 8px;">
+        <p style="text-align: justify; margin: 6.0pt 0 6.0pt"><span style="font-size: 14.0pt">Điều 24 Thông tư số 14/2026/TT-BNNMT ngày 27/02/2026 của Bộ trưởng Bộ Nông nghiệp và Môi trường</span></p></td>
+      </tr>
+      <tr>
+       <td style="vertical-align: middle; padding: 8px;">
+        <p style="text-align: justify; margin: 6.0pt 0 6.0pt"><span style="font-size: 14.0pt">5.4. Tỷ lệ hộ trên địa bàn thôn đạt tiêu chuẩn “5 không, 3 sạch, 3 an”</span></p></td>
+       <td colspan="3" style="vertical-align: middle; padding: 8px;">
+        <p style="text-align: justify; margin: 6.0pt 0 6.0pt"><span style="font-size: 14.0pt">Thực hiện đánh giá trên địa bàn thôn theo Hướng dẫn số 53-HD/ĐCT ngày 11/5/2026 của Đoàn Chủ tịch Hội Liên hiệp Phụ nữ Việt Nam </span></p></td>
+       <td style="vertical-align: middle; padding: 8px;">
+        <p style="text-align: center; margin: 18.0pt 0 6.0pt"><span style="font-size: 14.0pt">Báo cáo đánh giá</span></p></td>
+      </tr>
+      <tr>
+       <td style="vertical-align: middle; padding: 8px;">
+        <p style="text-align: justify; margin: 6.0pt 0 6.0pt"><span style="font-size: 14.0pt">5.5. Đảm bảo an toàn thực phẩm</span></p></td>
+       <td colspan="3" style="vertical-align: middle; padding: 8px;">
+        <p style="text-align: justify; margin: 6.0pt 0 6.0pt"><span style="font-size: 14.0pt">100% số hộ gia đình, cơ sở sản xuất, kinh doanh thực phẩm trên địa bàn thôn tuân thủ các quy định về đảm bảo an toàn thực phẩm </span></p></td>
+       <td style="vertical-align: middle; padding: 8px;">
+        <p style="text-align: justify; margin: 0pt 0 6.0pt"><span style="font-size: 14.0pt">Điều 26 Thông tư số 14/2026/TT-BNNMT ngày 27/02/2026 của Bộ trưởng Bộ Nông nghiệp và Môi trường</span></p></td>
+      </tr>
+      <tr>
+       <td rowspan="4" style="vertical-align: middle; padding: 8px;">
+        <p style="text-align: center; margin: 3.0pt 0 3.0pt"><span style="font-size: 14.0pt">6</span></p></td>
+       <td rowspan="4" style="vertical-align: middle; padding: 8px;">
+        <p style="text-align: center; margin: 3.0pt 0 3.0pt"><span style="font-size: 14.0pt">Khoa học công nghệ và Chuyển đổi số</span></p></td>
+       <td style="vertical-align: middle; padding: 8px;">
+        <p style="text-align: justify; margin: 6.0pt 0 6.0pt"><span style="font-size: 14.0pt">6.1. Nhà văn hóa hoặc điểm sinh hoạt cộng đồng của thôn có kết nối Internet cáp quang băng rộng, được trang bị wifi phục vụ nhu cầu truy cập, sử dụng các dịch vụ số của người dân</span></p></td>
+       <td colspan="3" style="vertical-align: middle; padding: 8px;">
+        <p style="text-align: center; margin: 6.0pt 0 6.0pt; line-height: 1.0"><span style="font-family: 'Times New Roman', serif; font-size: 14.0pt">Đạt</span></p></td>
+       <td style="vertical-align: middle; padding: 8px;">
+        <p style="text-align: justify; margin: 3.0pt 0 3.0pt"><span style="font-size: 14.0pt">Báo cáo và đánh giá thực tế</span></p></td>
+      </tr>
+      <tr>
+       <td style="vertical-align: middle; padding: 8px;">
+        <p style="text-align: justify; margin: 3.0pt 0 3.0pt"><span style="font-size: 14.0pt">6.2. </span><span style="color: #000000; font-family: 'TimesNewRomanPS-BoldMT;Times New Roman', serif; font-size: 14.0pt"><strong>Có thành lập tổ công nghệ số cộng đồng và tổ chức hoạt động hiệu quả mô hình tổ công nghệ số cộng đồng. Tổ công nghệ số cộng đồng phải có chương trình, kế hoạch hoạt động hằng năm. Hằng năm tổ chức ít nhất 04 hoạt động, sự kiện để hướng dẫn người dân về chuyển đổi số, thương mại điện tử</strong></span></p></td>
+       <td colspan="3" style="vertical-align: middle; padding: 8px;">
+        <p style="text-align: center; margin: 3.0pt 0 3.0pt; line-height: 1.0"><span style="font-family: 'Times New Roman', serif; font-size: 14.0pt">Đạt</span></p></td>
+       <td style="vertical-align: middle; padding: 8px;">
+        <p style="text-align: justify; margin: 3.0pt 0 3.0pt"><span style="color: #000000; font-family: 'TimesNewRomanPS-BoldMT;Times New Roman', serif; font-size: 14.0pt"><strong>Hướng dẫn số 3781/HD-BKHCN ngày 01/6/2026 của Bộ Khoa học và Công nghệ</strong></span></p></td>
+      </tr>
+      <tr>
+       <td style="vertical-align: middle; padding: 8px;">
+        <p style="text-align: justify; margin: 12.0pt 0 12.0pt"><span style="font-size: 14.0pt">6.3. Có hệ thống camera an ninh thôn ở trung tâm thôn, các điểm trọng yếu tại khu dân cư tập trung kết nối với Công an xã, Trưởng thôn</span></p></td>
+       <td colspan="3" style="vertical-align: middle; padding: 8px;">
+        <p style="text-align: center; margin: 12.0pt 0 12.0pt"><span style="font-size: 14.0pt">Đạt</span></p></td>
+       <td style="vertical-align: middle; padding: 8px;">
+        <p style="text-align: justify; margin: 12.0pt 0 12.0pt"><span style="font-size: 14.0pt">Báo cáo và đánh giá thực tế</span></p></td>
+      </tr>
+      <tr>
+       <td style="vertical-align: middle; padding: 8px;">
+        <p style="text-align: justify; margin: 12.0pt 0 12.0pt"><span style="font-size: 14.0pt">6.4. </span><span style="color: #000000; font-family: 'TimesNewRomanPS-BoldMT;Times New Roman', serif; font-size: 14.0pt"><strong>Có tối thiểu 90% số thuê bao sử dụng điện thoại thông minh trên tổng số thuê bao điện thoại di động trên địa bàn thôn</strong></span></p></td>
+       <td colspan="3" style="vertical-align: middle; padding: 8px;">
+        <p style="text-align: center; margin: 12.0pt 0 12.0pt"><span style="font-size: 14.0pt">Đạt</span></p></td>
+       <td style="vertical-align: middle; padding: 8px;">
+        <p style="text-align: justify; margin: 12.0pt 0 12.0pt"><span style="font-size: 14.0pt">Báo cáo và đánh giá thực tế (số thuê bao điện thoại di động trên địa bàn thôn là thuê bao được xác định có thời gian phát sinh lưu lượng nhiều nhất tại thôn đó. Thuê bao sử dụng điện thoại thông minh là thuê bao sử dụng thiết bị điện thoại có khả năng truy nhập dịch vụ Internet từ 3G trở lên)</span></p></td>
+      </tr>
+      <tr>
+       <td rowspan="7" style="vertical-align: middle; padding: 8px;">
+        <p style="text-align: center; margin: 3.0pt 0 3.0pt"><span style="font-size: 14.0pt">7</span></p></td>
+       <td rowspan="7" style="vertical-align: middle; padding: 8px;">
+        <p style="text-align: center; margin: 3.0pt 0 3.0pt"><span style="font-size: 14.0pt">Môi trường và cảnh quan nông thôn</span></p></td>
+       <td style="vertical-align: middle; padding: 8px;">
+        <p style="text-align: justify; margin: 10.0pt 0 10.0pt"><span style="font-size: 14.0pt">7.1. 100% hộ gia đình trên địa bàn thôn được tuyên truyền, vận động và ký cam kết thực hiện bảo vệ môi trường, xử lý rác thải và xác động vật chết theo quy định</span></p></td>
+       <td colspan="3" style="vertical-align: middle; padding: 8px;">
+        <p style="text-align: center; margin: 10.0pt 0 10.0pt"><span style="font-size: 14.0pt">Đạt</span></p></td>
+       <td style="vertical-align: middle; padding: 8px;">
+        <p style="text-align: center; margin: 10.0pt 0 10.0pt"><span style="font-size: 14.0pt">Báo cáo và đánh giá thực tế</span></p></td>
+      </tr>
+      <tr>
+       <td style="vertical-align: middle; padding: 8px;">
+        <p style="text-align: justify; margin: 10.0pt 0 10.0pt"><span style="font-size: 14.0pt">7.2. Tỷ lệ chất thải chăn nuôi, chất thải hữu cơ, phụ phẩm nông nghiệp trên địa bàn thôn được thu gom, xử lý, tái chế thành sản phẩm, nguyên liệu, nhiên liệu, phân bón</span></p></td>
+       <td colspan="3" style="vertical-align: middle; padding: 8px;">
+        <p style="text-align: center; margin: 10.0pt 0 10.0pt"><span style="font-size: 14.0pt">≥90%</span></p></td>
+       <td style="vertical-align: middle; padding: 8px;">
+        <p style="text-align: justify; margin: 10.0pt 0 10.0pt"><span style="font-size: 14.0pt">Điều 35 và Điều 36 Thông tư số 14/2026/TT-BNNMT ngày 27/02/2026 của Bộ trưởng Bộ Nông nghiệp và Môi trường</span></p></td>
+      </tr>
+      <tr>
+       <td style="vertical-align: middle; padding: 8px;">
+        <p style="text-align: justify; margin: 10.0pt 0 10.0pt"><span style="font-size: 14.0pt">7.3. Định kỳ tối thiểu 01 lần/tháng có tổ chức dọn vệ sinh, cắt cỏ, phát quang cây bụi, nạo vét, khai thông cống rãnh chung toàn thôn hoặc tại các điểm dân cư tập trung</span></p></td>
+       <td colspan="3" style="vertical-align: middle; padding: 8px;">
+        <p style="text-align: center; margin: 10.0pt 0 10.0pt"><span style="font-size: 14.0pt">Đạt</span></p></td>
+       <td style="vertical-align: middle; padding: 8px;">
+        <p style="text-align: center; margin: 10.0pt 0 10.0pt"><span style="font-size: 14.0pt">Báo cáo và đánh giá thực tế</span></p></td>
+      </tr>
+      <tr>
+       <td style="vertical-align: middle; padding: 8px;">
+        <p style="text-align: justify; margin: 3.0pt 0 3.0pt"><span style="font-size: 14.0pt">7.4. Có phương án và thực hiện phương án phù hợp về thoát nước, thu gom và xử lý nước thải sinh hoạt tại các khu dân cư nông thôn trên địa bàn thôn </span></p></td>
+       <td colspan="3" style="vertical-align: middle; padding: 8px;">
+        <p style="text-align: justify; margin: 3.0pt 0 3.0pt"><span style="font-size: 14.0pt">- Có phương án thoát nước, thu gom, xử lý nước thải phù hợp địa hình, khu dân cư trên địa bàn thôn.</span></p>
+        <p style="text-align: justify; margin: 3.0pt 0 3.0pt"><span style="font-size: 14.0pt">- Tỷ lệ nước thải sinh hoạt được thu gom, xử lý bằng biện pháp phù hợp</span><sup class="footnote-ref"><em>[4]</em></sup><span style="font-size: 14.0pt">: ≥ 50% </span></p></td>
+       <td style="vertical-align: middle; padding: 8px;">
+        <p style="text-align: justify; margin: 6.0pt 0 12.0pt"><span style="font-size: 14.0pt">Điều 8 Thông tư số <a href="/van-ban/chi-tiet/de075fe0-505a-11f1-95e6-7f86995e26de" target="_blank" rel="noopener noreferrer">10/2026/TT-BXD</a> ngày 31/3/2026 của Bộ trưởng Bộ Xây dựng </span></p></td>
+      </tr>
+      <tr>
+       <td style="vertical-align: middle; padding: 8px;">
+        <p style="text-align: justify; margin: 6.0pt 0 6.0pt"><span style="color: #000000; font-family: 'TimesNewRomanPS-BoldMT;Times New Roman', serif; font-size: 14.0pt"><strong>7.5. Tỷ lệ chất thải rắn sinh hoạt phát sinh từ các hộ gia đình, cá nhân, cơ sở sản xuất, kinh doanh, dịch vụ và các tổ chức khác trên địa bàn thôn được phân loại, thu gom, xử lý đạt từ 85% trở lên</strong></span></p></td>
+       <td colspan="3" style="vertical-align: middle; padding: 8px;">
+        <p style="text-align: center; margin: 3.0pt 0 3.0pt"><span style="font-size: 14.0pt">Đạt</span></p></td>
+       <td style="vertical-align: middle; padding: 8px;">
+        <p style="text-align: justify; margin: 3.0pt 0 3.0pt"><span style="font-size: 14.0pt">Điều 32 Thông tư số 14/2026/TT-BNNMT ngày 27/02/2026 của Bộ trưởng Bộ Nông nghiệp và Môi trường</span></p></td>
+      </tr>
+      <tr>
+       <td style="vertical-align: middle; padding: 8px;">
+        <p style="text-align: justify; margin: 6.0pt 0 6.0pt"><span style="font-size: 14.0pt">7.6. Cảnh quan, không gian xanh - sạch - đẹp, an toàn; có mô hình cải tạo, phục hồi cảnh quan, xử lý chất lượng nước mặt ao hồ, kênh mương (áp dụng đối với thôn có ao hồ, kênh mương); có các tuyến đường hoa</span><sup class="footnote-ref"><em>[5]</em></sup><span style="font-size: 14.0pt"> được tổ tự quản hoặc Hội đoàn thể quản lý, chăm sóc</span></p></td>
+       <td colspan="3" style="vertical-align: middle; padding: 8px;">
+        <p style="text-align: center; margin: 3.0pt 0 3.0pt"><span style="font-size: 14.0pt">Đạt</span></p></td>
+       <td style="vertical-align: middle; padding: 8px;">
+        <p style="text-align: justify; margin: 3.0pt 0 3.0pt"><span style="font-size: 14.0pt">Điều 39 và Điều 40 Thông tư số 14/2026/TT-BNNMT ngày 27/02/2026 của Bộ trưởng Bộ Nông nghiệp và Môi trường</span></p></td>
+      </tr>
+      <tr>
+       <td style="vertical-align: middle; padding: 8px;">
+        <p style="text-align: justify; margin: 6.0pt 0 6.0pt"><span style="font-size: 14.0pt">7.7. Việc mai táng, hỏa táng trên địa bàn thôn thực hiện phù hợp với quy hoạch và quy định; không phát sinh việc chôn cất mới ngoài các nghĩa trang được xây dựng theo quy hoạch</span></p></td>
+       <td colspan="3" style="vertical-align: middle; padding: 8px;">
+        <p style="text-align: center; margin: 3.0pt 0 3.0pt"><span style="font-size: 14.0pt">Đạt</span></p></td>
+       <td style="vertical-align: middle; padding: 8px;">
+        <p style="text-align: justify; margin: 3.0pt 0 3.0pt"><span style="font-size: 14.0pt">Báo cáo đánh giá việc mai táng, hỏa táng theo quy hoạch</span></p></td>
+      </tr>
+      <tr>
+       <td rowspan="3" style="vertical-align: middle; padding: 8px;">
+        <p style="text-align: center; margin: 3.0pt 0 3.0pt"><span style="font-size: 14.0pt">8</span></p></td>
+       <td rowspan="3" style="vertical-align: middle; padding: 8px;">
+        <p style="text-align: center; margin: 3.0pt 0 3.0pt"><span style="font-size: 14.0pt">Xây dựng hệ thống chính trị </span></p></td>
+       <td style="vertical-align: middle; padding: 8px;">
+        <p>&nbsp;</p>
+        <p style="text-align: justify; margin: 1.0pt 0 1.0pt"><span style="font-size: 14.0pt">8.1. Chi bộ thôn được xếp loại hoàn thành tốt nhiệm vụ trở lên trong năm đánh giá </span></p>
+        <p>&nbsp;</p></td>
+       <td colspan="3" style="vertical-align: middle; padding: 8px;">
+        <p>&nbsp;</p>
+        <p style="text-align: center; margin: 1.0pt 0 1.0pt"><span style="font-size: 14.0pt">Đạt</span></p>
+        <p>&nbsp;</p></td>
+       <td style="vertical-align: middle; padding: 8px;">
+        <p style="text-align: center; margin: 1.0pt 0 1.0pt"><span style="font-size: 14.0pt">Quyết định/Thông báo xếp loại của cấp có thẩm quyền</span></p></td>
+      </tr>
+      <tr>
+       <td style="vertical-align: middle; padding: 8px;">
+        <p style="text-align: justify; margin: 1.0pt 0 6.0pt"><span style="font-size: 14.0pt">8.2. Các tổ chức chính trị xã hội ở thôn (Chi hội Phụ nữ, Chi hội Nông dân, Chi hội Cựu chiến binh, Chi đoàn Thanh niên) hoàn thành tốt nhiệm vụ trở lên trong năm đánh giá</span></p></td>
+       <td colspan="3" style="vertical-align: middle; padding: 8px;">
+        <p style="text-align: center; margin: 1.0pt 0 1.0pt"><span style="font-size: 14.0pt">Đạt</span></p></td>
+       <td style="vertical-align: middle; padding: 8px;">
+        <p style="text-align: center; margin: 1.0pt 0 1.0pt"><span style="font-size: 14.0pt">Quyết định/Thông báo xếp loại của cấp có thẩm quyền</span></p></td>
+      </tr>
+      <tr>
+       <td style="vertical-align: middle; padding: 8px;">
+        <p style="text-align: justify; margin: 6.0pt 0 6.0pt"><span style="font-size: 14.0pt">8.3. Ban Giám sát đầu tư của cộng đồng thực hiện tốt việc tham gia giám sát các công trình, dự án, các khoản đóng góp của Nhân dân và việc thực hiện dân chủ ở cơ sở tại địa bàn</span></p></td>
+       <td colspan="3" style="vertical-align: middle; padding: 8px;">
+        <p style="text-align: center; margin: 6.0pt 0 6.0pt"><span style="font-size: 14.0pt">Đạt</span></p></td>
+       <td style="vertical-align: middle; padding: 8px;">
+        <p style="text-align: center; margin: 6.0pt 0 6.0pt"><span style="font-size: 14.0pt">Báo cáo</span></p></td>
+      </tr>
+      <tr>
+       <td rowspan="4" style="vertical-align: middle; padding: 8px;">
+        <p style="text-align: center; margin: 3.0pt 0 3.0pt"><span style="font-size: 14.0pt">9</span></p></td>
+       <td rowspan="4" style="vertical-align: middle; padding: 8px;">
+        <p style="text-align: center; margin: 3.0pt 0 3.0pt"><span style="font-size: 14.0pt">An ninh, Quốc phòng</span></p></td>
+       <td style="vertical-align: middle; padding: 8px;">
+        <p style="text-align: justify; margin: 6.0pt 0 6.0pt"><span style="font-size: 14.0pt">9.1. Thôn (khu dân cư) được công nhận đạt tiêu chuẩn “An toàn về an ninh trật tự” trong năm đánh giá </span></p></td>
+       <td colspan="3" style="vertical-align: middle; padding: 8px;">
+        <p style="text-align: center; margin: 6.0pt 0 6.0pt"><span style="font-size: 14.0pt">Đạt</span></p></td>
+       <td style="vertical-align: middle; padding: 8px;">
+        <p style="text-align: center; margin: 6.0pt 0 6.0pt"><span style="font-size: 14.0pt">Quyết định công nhận của cấp có thẩm quyền</span></p></td>
+      </tr>
+      <tr>
+       <td style="vertical-align: middle; padding: 8px;">
+        <p style="text-align: justify; margin: 6.0pt 0 6.0pt"><span style="font-size: 14.0pt">9.2. Tổ Bảo vệ an ninh, trật tự trên địa bàn thôn được đánh giá hoàn thành tốt nhiệm vụ trở lên trong năm đánh giá</span></p></td>
+       <td colspan="3" style="vertical-align: middle; padding: 8px;">
+        <p style="text-align: center; margin: 6.0pt 0 6.0pt"><span style="font-size: 14.0pt">Đạt</span></p></td>
+       <td style="vertical-align: middle; padding: 8px;">
+        <p style="text-align: center; margin: 6.0pt 0 6.0pt"><span style="font-size: 14.0pt">Quyết định/Thông báo xếp loại của cấp có thẩm quyền</span></p></td>
+      </tr>
+      <tr>
+       <td style="vertical-align: middle; padding: 8px;">
+        <p style="text-align: justify; margin: 6.0pt 0 6.0pt"><span style="font-size: 14.0pt">9.3. 100% công dân trong độ tuổi dân quân tự vệ, công dân nam trong độ tuổi sẵn sàng nhập ngũ; chấp hành tốt việc đăng ký nghĩa vụ quân sự. Hoàn thành chỉ tiêu giao quân (nếu thôn có thanh niên trúng tuyển nghĩa vụ quân sự)</span></p></td>
+       <td colspan="3" style="vertical-align: middle; padding: 8px;">
+        <p style="text-align: center; margin: 6.0pt 0 6.0pt"><span style="font-size: 14.0pt">Đạt</span></p></td>
+       <td style="vertical-align: middle; padding: 8px;">
+        <p style="text-align: center; margin: 6.0pt 0 6.0pt"><span style="font-size: 14.0pt">Báo cáo</span></p></td>
+      </tr>
+      <tr>
+       <td style="vertical-align: middle; padding: 8px;">
+        <p style="text-align: justify; margin: 6.0pt 0 6.0pt"><span style="font-size: 14.0pt">9.4. Không có trường hợp bị tước danh hiệu Dân quân tự vệ; không có trường hợp thanh niên chống lệnh gọi nhập ngũ, chống khám nghĩa vụ quân sự trong năm đánh giá</span></p></td>
+       <td colspan="3" style="vertical-align: middle; padding: 8px;">
+        <p style="text-align: center; margin: 3.0pt 0 3.0pt"><span style="font-size: 14.0pt">Đạt</span></p></td>
+       <td style="vertical-align: middle; padding: 8px;">
+        <p style="text-align: center; margin: 3.0pt 0 3.0pt"><span style="font-size: 14.0pt">Báo cáo</span></p></td>
+      </tr>
+     </tbody>
+    </table>
+    <p>&nbsp;</p>
+    <p style="text-align: justify; margin: 6.0pt 0 0pt"><span style="font-size: 13.0pt">Ghi chú: Xã nhóm 1, nhóm 2, nhóm 3 được xác định tại Thông báo số 43/TB-UBND ngày 23 tháng 3 năm 2026 của Ủy ban nhân dân thành phố về Danh sách, số lượng xã thuộc xã nhóm 1, xã nhóm 2, xã nhóm 3 và lộ trình xây dựng nông thôn mới giai đoạn 2026-2030 trên địa bàn thành phố Đà Nẵng (hoặc văn bản sửa đổi, bổ sung nếu có).</span></p>
+    <hr class="footnotes-sep">
+    <section class="footnotes">
+     <ol class="footnotes-list">
+      <li class="footnote-item" data-block-id="fn-2" data-node-id="fn-2" id="fn-2">
+       <p style="text-align: justify; margin: 0pt 0 0pt"><span style="font-size: 10.0pt">Trồng ở nơi có điều kiện trồng đảm bảo cây sống, sinh trưởng tốt, được cụ thể trong phương án thôn nông thôn mới. Về chủng loại cây trồng dọc tuyến: Lựa chọn theo danh mục khuyến cáo của cơ quan chuyên ngành, ư</span><span style="color: #000000; font-size: 10.0pt">u tiên sử dụng các loại cây xanh bản địa, đặc trưng vùng, miền và phù hợp với khu vực nông thôn, bảo vệ được các cây quý hiếm, cây cổ thụ có giá trị;</span><span style="font-size: 10.0pt"> không trồng các loài cây dễ gãy, đổ, ảnh hưởng an toàn giao thông và hành lang an toàn lưới điện, không trồng các loài cây thuộc danh mục loài ngoại lai xâm hại theo quy định của ngành nông nghiệp.</span> <em>↩</em></p></li>
+      <li class="footnote-item" data-block-id="fn-3" data-node-id="fn-3" id="fn-3">
+       <p style="text-align: justify; margin: 0pt 0 0pt"><span style="font-size: 10.0pt">Vụ ngộ độc thực phẩm là tình trạng ngộ độc cấp xảy ra với 2 người trở lên có dấu hiệu ngộ độc khi ăn cùng một loại thực phẩm tại cùng một địa điểm, thời gian; trường hợp chỉ có một người mắc và bị tử vong cũng được coi là một vụ ngộ độc thực phẩm theo quy định tại Quyết định số <a href="/van-ban/chi-tiet/14327" target="_blank" rel="noopener noreferrer">39/2006/QĐ-BYT</a> ngày 13/12/2006 của Bộ trưởng Bộ Y tế</span> <em>↩</em></p></li>
+      <li class="footnote-item" data-block-id="fn-4" data-node-id="fn-4" id="fn-4">
+       <p style="text-align: justify; margin: 0pt 0 0pt"><span style="font-size: 10.0pt">X</span><span style="font-size: 10.0pt">ử lý bằng biện pháp phù hợp</span><span style="font-size: 10.0pt">: Bể tự hoại xây dựng đúng quy cách hoặc công trình xử lý phân tán phi tập trung quy mô hộ, cụm hộ gia đình, khu dân cư nông thôn dựa trên</span><span style="font-family: 'Times New Roman', serif; font-size: 10.0pt"> </span><span style="font-family: 'Times New Roman', serif; font-size: 10.0pt">đ</span><span style="font-size: 10.0pt">ặc thù mật độ dân cư và điều kiện tự nhiên hoặc hệ thống thu gom, xử lý tập trung quy mô nhỏ (nếu có)</span><span style="font-size: 10.0pt">.</span> <em>↩</em></p></li>
+      <li class="footnote-item" data-block-id="fn-5" data-node-id="fn-5" id="fn-5">
+       <p style="text-align: justify; margin: 0pt 0 0pt"><span style="font-size: 10.0pt">Tổng chiều dài các tuyến đường hoa trên địa bàn thôn tối thiểu 2 km đối với thôn thuộc xã nhóm 1, tối thiểu 1,5 km đối với thôn thuộc xã nhóm 2, tối thiểu 1,0 km đối với thôn thuộc xã nhóm 3</span> <em>↩</em></p></li>
+     </ol>
+    </section>
+   </article>
+  </main>
+ </body>
+</html>

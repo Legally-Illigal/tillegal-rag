@@ -1,0 +1,104 @@
+{
+  "id": "007f17e0-ca11-11f1-95d1-8d10606648a3",
+  "docType": {
+    "id": "0a5362e8-cdca-436e-96cd-979598df3b16",
+    "name": "Quyết định",
+    "code": "QĐ",
+    "parentCode": "VBQPPL",
+    "parentName": null
+  },
+  "docGroup": "VBQPPL",
+  "docNum": "148/2026/QĐ-UBND",
+  "title": "Quyết định số 148/2026/QĐ-UBND Ban hành tiêu chí thôn nông thôn mới giai đoạn 2026-2030 áp dụng trên địa bàn thành phố Đà Nẵng",
+  "applicationNote": null,
+  "issueDate": "2026-10-14T00:00:00",
+  "effFrom": "2026-11-01T00:00:00",
+  "effTo": "2030-12-31T00:00:00",
+  "publicDate": null,
+  "effStatus": {
+    "id": "dc434caf-9223-40de-a759-d4f2e3f7b06f",
+    "name": "Chưa có hiệu lực",
+    "code": "CCHL",
+    "parentCode": null,
+    "parentName": null
+  },
+  "status": "Publish",
+  "lang": null,
+  "defaultLanguage": "VN",
+  "updatedBy": "dng_bientap",
+  "updatedDate": "2026-10-17T17:14:21",
+  "agencyName": "UBND thành phố Đà Nẵng",
+  "organization": {
+    "id": "2e638f1a-63d2-4de7-9b4a-fa4ee614f8b1",
+    "code": "H48",
+    "name": "Đà Nẵng",
+    "nameEn": "Đà Nẵng",
+    "shortName": null,
+    "orgType": "1"
+  },
+  "isLw": false,
+  "documentContent": {
+    "id": "007f17e0-ca11-11f1-95d1-8d10606648a3",
+    "title": null,
+    "content": "$c"
+  },
+  "documentContentEn": null,
+  "documentContentFileName": "148.2026.QD.UBND.pdf",
+  "documentContentFileDocName": "148.2026.QD.UBND.doc",
+  "documentIssues": [
+    {
+      "id": "82a4e4f0-ca13-11f1-99ea-a7ec359894d6",
+      "agencyId": "3d36b520-99f8-11f0-904c-c5615c4aa0c1",
+      "agencyName": "UBND thành phố Đà Nẵng",
+      "agencyNameEn": "Da Nang People's Council Organization",
+      "agencyCode": "DNAUB",
+      "personId": "3940",
+      "personName": "Trần Nam Hưng",
+      "jobTitleId": "256",
+      "jobTitleCode": "256",
+      "jobTitleName": "Phó Chủ tịch",
+      "orderIndex": 1
+    }
+  ],
+  "documentMajors": [
+    {
+      "id": "nganh_442",
+      "name": "Nông nghiệp và Môi trường",
+      "code": null,
+      "parentCode": null,
+      "parentName": null
+    }
+  ],
+  "documentFields": [
+    {
+      "id": "e46684bd-c0c5-4365-bc00-3d57a8368806",
+      "name": "Phát triển ngành nghề nông thôn",
+      "code": null,
+      "parentCode": null,
+      "parentName": null
+    }
+  ],
+  "documentRelatedList": [],
+  "provisionTree": null,
+  "references": null,
+  "isEffectAllDocument": false,
+  "isOld": false,
+  "reviewStatus": null,
+  "reviewed": false,
+  "isTranslationDoc": false,
+  "isConsolidatedDocument": false,
+  "isConstitutionDocument": false,
+  "isAdministrativeDocument": false,
+  "viewCount": 3,
+  "showViewCount": true,
+  "hasContent": true,
+  "hasOriginalPdf": null,
+  "hasAIProcessed": false,
+  "hasClauseRelation": null,
+  "aiResults": [
+    "OCR_CONTENT_SUCCESS",
+    "PROVISION_PROCESS_SUCCESS",
+    "METADATA_PROCESS_SUCCESS",
+    "REFERENCE_ARTICLE_PROCESS_SUCCESS"
+  ]
+}

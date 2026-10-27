@@ -1,0 +1,85 @@
+{
+  "as_of_date": "2026-10-19",
+  "temporal_scope": "applicable",
+  "evidence": [],
+  "ingestion_reports": [
+    {
+      "document_id": "007f17e0-ca11-11f1-95d1-8d10606648a3",
+      "document_number": "148/2026/QĐ-UBND",
+      "snapshot_id": "snapshot-103e1d04e6d05f31",
+      "chunks": 61,
+      "counts": {
+        "annex_note": 1,
+        "article": 3,
+        "article_heading": 3,
+        "clause": 9,
+        "footnote": 4,
+        "point": 5,
+        "table_row": 36
+      },
+      "hash_checks": {
+        "content.html": "mismatch",
+        "content.txt": "mismatch"
+      },
+      "warnings": [
+        "HASH_MISMATCH:content.html",
+        "HASH_MISMATCH:content.txt",
+        "TEMPORAL_METADATA_NOT_INDEPENDENTLY_VERIFIED",
+        "SOURCE_URL_MISSING"
+      ],
+      "references": [
+        {
+          "label": "72/2025/QH15",
+          "href": "/van-ban/chi-tiet/178340",
+          "resolved": false
+        },
+        {
+          "label": "64/2025/QH15",
+          "href": "/van-ban/chi-tiet/175440",
+          "resolved": false
+        },
+        {
+          "label": "87/2025/QH15",
+          "href": "/van-ban/chi-tiet/178717",
+          "resolved": false
+        },
+        {
+          "label": "78/2025/NĐ-CP",
+          "href": "/van-ban/chi-tiet/176696",
+          "resolved": false
+        },
+        {
+          "label": "187/2025/NĐ-CP",
+          "href": "/van-ban/chi-tiet/179644",
+          "resolved": false
+        },
+        {
+          "label": "51/2025/QĐ-TTg",
+          "href": "/van-ban/chi-tiet/186295",
+          "resolved": false
+        },
+        {
+          "label": "10/2026/TT-BXD",
+          "href": "/van-ban/chi-tiet/de075fe0-505a-11f1-95e6-7f86995e26de",
+          "resolved": false
+        },
+        {
+          "label": "17/2026/TT-BCT",
+          "href": "/van-ban/chi-tiet/187839",
+          "resolved": false
+        },
+        {
+          "label": "42/2026/TT-BGDĐT",
+          "href": "/van-ban/chi-tiet/e6a2dd20-60bb-11f1-adfb-b3c7a20e7cb7",
+          "resolved": false
+        },
+        {
+          "label": "39/2006/QĐ-BYT",
+          "href": "/van-ban/chi-tiet/14327",
+          "resolved": false
+        }
+      ],
+      "input_folder": "sample_data/148_2026_QD_UBND"
+    }
+  ]
+}
