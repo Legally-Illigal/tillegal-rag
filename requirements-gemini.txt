@@ -1,0 +1,2 @@
+# Optional Gemini Judge only; Python >=3.11. Baseline requirements unchanged.
+google-genai==2.34.0

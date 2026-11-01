@@ -1,0 +1,4 @@
+# Judge + OpenAIProvider use Python standard library only: no extra pip packages.
+# OpenAI is called through official HTTPS REST /v1/responses, not an SDK.
+# Therefore there is no SDK auto-retry or SDK version to install/pin.
+# Baseline RAG/ML dependencies stay in requirements.txt and requirements-lock.txt.

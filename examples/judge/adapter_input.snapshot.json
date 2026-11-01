@@ -1,0 +1,298 @@
+{
+  "request_id": "synthetic-judge-demo",
+  "question": "Theo đoạn giả định, nhóm A cần điều kiện gì?",
+  "query_plan": {
+    "issues": [
+      {
+        "issue_id": "I1",
+        "text": "Điều kiện cho nhóm A trong ví dụ giả định"
+      }
+    ]
+  },
+  "evidence": [
+    {
+      "evidence_id": "evidence:367a9bece44c4dade9a148d2f2a6474a8156ea52829e8b6c5e843495cc1523fd",
+      "content": "1. Đơn vị mẫu tổ chức đối thoại với nhóm A khi có điều kiện B.",
+      "document_id": "synthetic::judge-fixture",
+      "document_version_id": "dv:58001289cdb0ce05fd139e49d61197d66aa2d720556d7cf584ff6d4dda9d4ef6",
+      "chunk_id": "chunk:978fcc4b4e4b335c9e45fd1571416b82da4d510f9086d164ea6f0874c6a1c0cc",
+      "article_id": "node:02a624618a822eaa2e69807da17efa7d7b604e965e90361a6c483de41f88fccb",
+      "article_id_status": "PARSER_CANDIDATE_NOT_LEGAL_VERIFICATION",
+      "quote_sha256": "ed0b0f790d84fb1846bcffe0af2953235b3e8658f9f0ed46663730e50123aa8a",
+      "quote_representation": "NORMALIZED_CHUNK_TEXT",
+      "normalized_locator": {
+        "block_id": "block:467c285931e976d26eaf49d1d6986652f3d8a19a5d932056cdfa75c757dc0348",
+        "start": 0,
+        "end": 62,
+        "offset_unit": "unicode_code_point",
+        "end_exclusive": true
+      },
+      "source_locator": {
+        "block_source_end": 126,
+        "block_source_start": 64,
+        "content_sha256": "005992cda4d28d5e31ea2c6748ea3c6e069bf5cdb9f939deab0f1bd14fd6f679",
+        "end_exclusive": true,
+        "offset_unit": "unicode_code_point"
+      },
+      "source_locator_extent": "WHOLE_BLOCK",
+      "attachment_status": "STRUCTURAL",
+      "address_status": "RULE_BASED_UNVERIFIED",
+      "exact_citation_verified": false,
+      "legal_evidence_status": "NOT_EVALUATED",
+      "context_review_required": true,
+      "is_heading": true,
+      "document_number": null,
+      "title": null,
+      "source_url": null,
+      "issuing_authority": null,
+      "source_version": null,
+      "effective_from": null,
+      "effective_to": null,
+      "issued_on": null,
+      "temporal_status": "UNKNOWN",
+      "legal_approval": "QUARANTINE",
+      "provenance_status": "UNVERIFIED",
+      "rights_status": "UNVERIFIED",
+      "usage_policy": "EXPERIMENTAL_ONLY",
+      "effect_status_reported": null,
+      "status_observed_at": null,
+      "collected_at": null,
+      "article": "1",
+      "clause": "1",
+      "point": null,
+      "scope": "main",
+      "appendix": null,
+      "form": null,
+      "warnings": [
+        "CONTEXT_SUFFICIENCY_NOT_EVALUATED",
+        "EXPERIMENTAL_UNVERIFIED_SOURCE",
+        "HEADING_BLOCK_MAY_REQUIRE_BODY",
+        "LEGAL_SUPPORT_NOT_EVALUATED",
+        "SYNTHETIC_NOT_LAW"
+      ]
+    },
+    {
+      "evidence_id": "evidence:7dac9ded4604266cd5b3896accce415602e7108ba24e97ef7876c1daefa9e094",
+      "content": "2. Ngoại lệ giả định C cần căn cứ riêng.",
+      "document_id": "synthetic::judge-fixture",
+      "document_version_id": "dv:58001289cdb0ce05fd139e49d61197d66aa2d720556d7cf584ff6d4dda9d4ef6",
+      "chunk_id": "chunk:339e77a0cc30165fab74b0bd9d06f099df2f1d6396a9c2cb844fa1c5d0e2d785",
+      "article_id": "node:02a624618a822eaa2e69807da17efa7d7b604e965e90361a6c483de41f88fccb",
+      "article_id_status": "PARSER_CANDIDATE_NOT_LEGAL_VERIFICATION",
+      "quote_sha256": "00e827f017459bff2fa93eb34f26a71aaa034a776fb4163530b12f5e497dbbdd",
+      "quote_representation": "NORMALIZED_CHUNK_TEXT",
+      "normalized_locator": {
+        "block_id": "block:a55f6d1db0fd5cfa934bfeddf37e9fe916673873a1f1afb8e4346078010c4079",
+        "start": 0,
+        "end": 40,
+        "offset_unit": "unicode_code_point",
+        "end_exclusive": true
+      },
+      "source_locator": {
+        "block_source_end": 167,
+        "block_source_start": 127,
+        "content_sha256": "005992cda4d28d5e31ea2c6748ea3c6e069bf5cdb9f939deab0f1bd14fd6f679",
+        "end_exclusive": true,
+        "offset_unit": "unicode_code_point"
+      },
+      "source_locator_extent": "WHOLE_BLOCK",
+      "attachment_status": "STRUCTURAL",
+      "address_status": "RULE_BASED_UNVERIFIED",
+      "exact_citation_verified": false,
+      "legal_evidence_status": "NOT_EVALUATED",
+      "context_review_required": true,
+      "is_heading": true,
+      "document_number": null,
+      "title": null,
+      "source_url": null,
+      "issuing_authority": null,
+      "source_version": null,
+      "effective_from": null,
+      "effective_to": null,
+      "issued_on": null,
+      "temporal_status": "UNKNOWN",
+      "legal_approval": "QUARANTINE",
+      "provenance_status": "UNVERIFIED",
+      "rights_status": "UNVERIFIED",
+      "usage_policy": "EXPERIMENTAL_ONLY",
+      "effect_status_reported": null,
+      "status_observed_at": null,
+      "collected_at": null,
+      "article": "1",
+      "clause": "2",
+      "point": null,
+      "scope": "main",
+      "appendix": null,
+      "form": null,
+      "warnings": [
+        "CONTEXT_SUFFICIENCY_NOT_EVALUATED",
+        "EXPERIMENTAL_UNVERIFIED_SOURCE",
+        "HEADING_BLOCK_MAY_REQUIRE_BODY",
+        "LEGAL_SUPPORT_NOT_EVALUATED",
+        "SYNTHETIC_NOT_LAW"
+      ]
+    },
+    {
+      "evidence_id": "evidence:e0bea43a1043a329e7e26055018c789ac25b57834ad23d99db9e13b989c9b1f5",
+      "content": "Điều 1. Đối thoại giả định",
+      "document_id": "synthetic::judge-fixture",
+      "document_version_id": "dv:58001289cdb0ce05fd139e49d61197d66aa2d720556d7cf584ff6d4dda9d4ef6",
+      "chunk_id": "chunk:a728aa44c1ddb78cd433fcd14edd2174f45238b9c151751060da39f231eef5dd",
+      "article_id": "node:02a624618a822eaa2e69807da17efa7d7b604e965e90361a6c483de41f88fccb",
+      "article_id_status": "PARSER_CANDIDATE_NOT_LEGAL_VERIFICATION",
+      "quote_sha256": "3754cf64ead5d46524b15bf9a277abc7335ac7ca9b294e4f490da37f6ad0dbbf",
+      "quote_representation": "NORMALIZED_CHUNK_TEXT",
+      "normalized_locator": {
+        "block_id": "block:2e258a0a47128854f2384210d8ebb363cd3b4ad309664119e98f293754e0ffc1",
+        "start": 0,
+        "end": 26,
+        "offset_unit": "unicode_code_point",
+        "end_exclusive": true
+      },
+      "source_locator": {
+        "block_source_end": 63,
+        "block_source_start": 37,
+        "content_sha256": "005992cda4d28d5e31ea2c6748ea3c6e069bf5cdb9f939deab0f1bd14fd6f679",
+        "end_exclusive": true,
+        "offset_unit": "unicode_code_point"
+      },
+      "source_locator_extent": "WHOLE_BLOCK",
+      "attachment_status": "STRUCTURAL",
+      "address_status": "RULE_BASED_UNVERIFIED",
+      "exact_citation_verified": false,
+      "legal_evidence_status": "NOT_EVALUATED",
+      "context_review_required": true,
+      "is_heading": true,
+      "document_number": null,
+      "title": null,
+      "source_url": null,
+      "issuing_authority": null,
+      "source_version": null,
+      "effective_from": null,
+      "effective_to": null,
+      "issued_on": null,
+      "temporal_status": "UNKNOWN",
+      "legal_approval": "QUARANTINE",
+      "provenance_status": "UNVERIFIED",
+      "rights_status": "UNVERIFIED",
+      "usage_policy": "EXPERIMENTAL_ONLY",
+      "effect_status_reported": null,
+      "status_observed_at": null,
+      "collected_at": null,
+      "article": "1",
+      "clause": null,
+      "point": null,
+      "scope": "main",
+      "appendix": null,
+      "form": null,
+      "warnings": [
+        "CONTEXT_SUFFICIENCY_NOT_EVALUATED",
+        "EXPERIMENTAL_UNVERIFIED_SOURCE",
+        "HEADING_BLOCK_MAY_REQUIRE_BODY",
+        "LEGAL_SUPPORT_NOT_EVALUATED",
+        "SYNTHETIC_NOT_LAW"
+      ]
+    }
+  ],
+  "as_of_date": null,
+  "search_rounds_completed": 1,
+  "query_history": [
+    "Q1"
+  ],
+  "query_text_history": [
+    "điều kiện nhóm A"
+  ],
+  "context": {
+    "bundle_id": "bundle:7d98d47413f9d6552bf1edb93e7a93b1255883bd1f3f6f80b7be3055779fbeaa",
+    "builder_version": "evidence-builder-v1",
+    "index_id": "bm25:64c0e33840c5b69cc1569e1c5eb43126eb191f7f948f701caa316c1fdf76d77b",
+    "retrieval_status": "OK",
+    "usage_policy": "EXPERIMENTAL_ONLY",
+    "approved_for_legal_verification": false,
+    "bundle_status": "ASSEMBLED",
+    "limitations": [
+      "NO_LEGAL_OR_SEMANTIC_VERIFICATION",
+      "CONTEXT_SUFFICIENCY_NOT_EVALUATED",
+      "NO_CROSS_REFERENCE_EXPANSION",
+      "RAW_LOCATOR_COVERS_WHOLE_BLOCK",
+      "CHAR_BUDGET_IS_NOT_PROVIDER_TOKEN_BUDGET"
+    ],
+    "groups": [
+      {
+        "retrieved_chunk_id": "chunk:978fcc4b4e4b335c9e45fd1571416b82da4d510f9086d164ea6f0874c6a1c0cc",
+        "seed_included": true,
+        "omitted_chunk_ids": [],
+        "context_sufficiency": "NOT_EVALUATED",
+        "members": [
+          {
+            "evidence_id": "evidence:e0bea43a1043a329e7e26055018c789ac25b57834ad23d99db9e13b989c9b1f5",
+            "role": "ANCESTOR_HEADING_CANDIDATE"
+          },
+          {
+            "evidence_id": "evidence:367a9bece44c4dade9a148d2f2a6474a8156ea52829e8b6c5e843495cc1523fd",
+            "role": "RETRIEVED"
+          },
+          {
+            "evidence_id": "evidence:7dac9ded4604266cd5b3896accce415602e7108ba24e97ef7876c1daefa9e094",
+            "role": "ARTICLE_CONTEXT_CANDIDATE"
+          }
+        ],
+        "retrieval_cautions": [
+          "EXPERIMENTAL_UNVERIFIED_SOURCE",
+          "HEADING_BLOCK_MAY_REQUIRE_BODY",
+          "LEGAL_SUPPORT_NOT_EVALUATED"
+        ]
+      },
+      {
+        "retrieved_chunk_id": "chunk:339e77a0cc30165fab74b0bd9d06f099df2f1d6396a9c2cb844fa1c5d0e2d785",
+        "seed_included": true,
+        "omitted_chunk_ids": [],
+        "context_sufficiency": "NOT_EVALUATED",
+        "members": [
+          {
+            "evidence_id": "evidence:e0bea43a1043a329e7e26055018c789ac25b57834ad23d99db9e13b989c9b1f5",
+            "role": "ANCESTOR_HEADING_CANDIDATE"
+          },
+          {
+            "evidence_id": "evidence:367a9bece44c4dade9a148d2f2a6474a8156ea52829e8b6c5e843495cc1523fd",
+            "role": "ARTICLE_CONTEXT_CANDIDATE"
+          },
+          {
+            "evidence_id": "evidence:7dac9ded4604266cd5b3896accce415602e7108ba24e97ef7876c1daefa9e094",
+            "role": "RETRIEVED"
+          }
+        ],
+        "retrieval_cautions": [
+          "EXPERIMENTAL_UNVERIFIED_SOURCE",
+          "HEADING_BLOCK_MAY_REQUIRE_BODY",
+          "LEGAL_SUPPORT_NOT_EVALUATED"
+        ]
+      },
+      {
+        "retrieved_chunk_id": "chunk:a728aa44c1ddb78cd433fcd14edd2174f45238b9c151751060da39f231eef5dd",
+        "seed_included": true,
+        "omitted_chunk_ids": [],
+        "context_sufficiency": "NOT_EVALUATED",
+        "members": [
+          {
+            "evidence_id": "evidence:e0bea43a1043a329e7e26055018c789ac25b57834ad23d99db9e13b989c9b1f5",
+            "role": "RETRIEVED"
+          },
+          {
+            "evidence_id": "evidence:367a9bece44c4dade9a148d2f2a6474a8156ea52829e8b6c5e843495cc1523fd",
+            "role": "ARTICLE_CONTEXT_CANDIDATE"
+          },
+          {
+            "evidence_id": "evidence:7dac9ded4604266cd5b3896accce415602e7108ba24e97ef7876c1daefa9e094",
+            "role": "ARTICLE_CONTEXT_CANDIDATE"
+          }
+        ],
+        "retrieval_cautions": [
+          "EXPERIMENTAL_UNVERIFIED_SOURCE",
+          "HEADING_BLOCK_MAY_REQUIRE_BODY",
+          "LEGAL_SUPPORT_NOT_EVALUATED"
+        ]
+      }
+    ]
+  }
+}

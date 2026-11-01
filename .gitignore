@@ -1,0 +1,73 @@
+# Local runtime, corpus, indexes and generated artifacts
+.venv/
+venv/
+.model-cache/
+.pip-cache/
+.tmp/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage*
+htmlcov/
+/data/
+/outputs/
+/reports/
+/tests/
+/tillegal_pilot_benchmark/
+*.log
+*.zip
+*.7z
+*.tar
+*.gz
+*.safetensors
+*.pt
+*.pth
+*.onnx
+*.npy
+*.npz
+*.parquet
+# Credentials (only the empty example is published)
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.p12
+*.pfx
+credentials*.json
+secrets*.json
+.aws/
+# Internal instructions, research and local tooling
+/0[0-6]-*.md
+/CHECKPOINT*.md
+/Document 1 Project Sprints Implements-*.md
+/Legal_AI_P3_Ten_Projects.md
+/Paper L-MARS.md
+/Tillegal_Bao_cao_phuong_an_trien_khai.docx
+AGENTS.md
+.agents/
+.codex/
+# Optional local evaluation/probing tools, outside handoff scope
+/ai_core/retrieval_comparison.py
+/ai_core/retrieval_evaluation.py
+/scripts/measure_bm25_baseline.py
+/scripts/prepare_retrieval_review.py
+/scripts/smoke_claude_live_fix.py
+/scripts/probe_t7_models.py
+.tmp-*/
+
+# Judge technical tests are part of the handoff.
+!/tests/
+/tests/*
+!/tests/__init__.py
+!/tests/judge_support.py
+!/tests/test_judge.py
+!/tests/test_judge_integration.py
+!/tests/test_chatgpt.py
+!/tests/chatgpt.test.mjs
+
+!/tests/test_openai_provider.py
+
+!/tests/test_gemini_provider.py

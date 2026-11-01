@@ -1,0 +1,40 @@
+{
+  "schema_version": "1",
+  "kind": "dense_index",
+  "index_id": "bm25:2a751dc020052aed315bd56ac49b92c734e632db94b1f4241d18e273640117ed",
+  "source": {
+    "artifact_hashes": {
+      "chunks.jsonl": "82a655314e03232a5f932b9515b136a56a4d879cd95240f2ddba25256751867c",
+      "structures.jsonl": "d01e9d4019391122ca149128027ce1216137fae02f7dbeeebfb1f04433cc0617",
+      "validation.json": "d41aad31fb4feff73446e5524da26a5199abeac3ad02b1ba2325153d483ccc9d"
+    },
+    "parser_version": "legal-structure-v1.1",
+    "processed_manifest_sha256": "f4dbdeb51800d70bf7a0a38a0f6d07104d3940fa77b7a93bd62daad0f2be595d",
+    "processed_schema_version": "2",
+    "processed_snapshot_id": "8040db1bfeddb99b93e8937a1c35e634de198a703286318d459d80e90987bfb7",
+    "source_snapshot_id": "e2551a80c69ef56a6d1906fff79890916540e63f0450258c5c4a1bac333dd279",
+    "staging_snapshot_id": "57b706177f7d1ad72efd20f90bb36715dce6be1c0268b041319ca465afdb1faa"
+  },
+  "encoder": {
+    "model": "intfloat/multilingual-e5-small",
+    "revision": "614241f622f53c4eeff9890bdc4f31cfecc418b3",
+    "dimension": 384,
+    "max_tokens": 512,
+    "pooling": "masked_mean_l2",
+    "text_policy": "nfc_windows_480_overlap64_v1",
+    "dtype": "float32",
+    "device": "cpu",
+    "libraries": {
+      "torch": "2.14.1",
+      "transformers": "5.20.2",
+      "numpy": "2.5.4"
+    }
+  },
+  "rows": 3085,
+  "build_seconds": 127.32510990000003,
+  "files": {
+    "vectors.npy": "57ec40f4b3d1eb8e571f0f1e355be23e55f81553b457afb085b2536e4c6272d8",
+    "rows.json": "28d8d49eb50111009292a0b86af2f4557d0f4e6be6fc3ebc3b0da571358dc4b1"
+  },
+  "dense_index_id": "d0f49e4df67e7818077964a027e8f130a8b15c215d895c882163bad3b892216d"
+}

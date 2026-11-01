@@ -1,0 +1,7 @@
+# Index manifests pin Python file bytes; avoid checkout newline conversion.
+ai_core/**/*.py -text whitespace=blank-at-eol,blank-at-eof,space-before-tab,cr-at-eol
+ai_core/*.py -text whitespace=blank-at-eol,blank-at-eof,space-before-tab,cr-at-eol
+scripts/*.py -text whitespace=blank-at-eol,blank-at-eof,space-before-tab,cr-at-eol
+
+# Keep manifest-pinned JSON artifact bytes on Windows checkout.
+data/indexes/**/index.json -text

@@ -1,0 +1,6 @@
+# Direct dependencies; requirements-lock.txt captures the tested Windows environment.
+torch==2.14.1
+transformers==5.20.2
+numpy==2.5.4
+beautifulsoup4==4.15.0
+pyarrow==26.0.0

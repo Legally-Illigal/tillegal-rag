@@ -1,0 +1,26 @@
+{
+  "request_id": "req-synthetic",
+  "question": "Theo đoạn giả định, nhóm A cần điều kiện gì?",
+  "query_plan": {
+    "issues": [
+      {
+        "issue_id": "I1",
+        "text": "Điều kiện cho nhóm A trong ví dụ giả định"
+      }
+    ]
+  },
+  "evidence": [
+    {
+      "evidence_id": "E1",
+      "content": "GIẢ ĐỊNH: nhóm A cần điều kiện B."
+    }
+  ],
+  "as_of_date": null,
+  "search_rounds_completed": 1,
+  "query_history": [
+    "Q1"
+  ],
+  "query_text_history": [
+    "điều kiện nhóm A"
+  ]
+}

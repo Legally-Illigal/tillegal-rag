@@ -1,0 +1,9 @@
+{
+  "status": "ERROR",
+  "issue_checks": [],
+  "missing_items": [],
+  "next_queries": [],
+  "usable_evidence_ids": [],
+  "explanation": "Không hoàn tất đánh giá Judge; xem error_code.",
+  "error_code": "MOCK_NOT_EVALUATED"
+}

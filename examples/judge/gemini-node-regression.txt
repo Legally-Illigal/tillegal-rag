@@ -1,0 +1,29 @@
+✔ PKCE, host identity, scope, callback and real app name are explicit (2.9842ms)
+✔ OAuth rejects wrong state, denied grant, missing/changed client ID and duplicate code (3.3045ms)
+✔ ID token verifies real RSA signature, issuer, audience, expiry, nonce and subject (7.397ms)
+✔ Full loopback login persists issued registration and verified identity; credentials never in status (34.7798ms)
+✔ Failed account verification preserves previous active account and pending registration (15.4813ms)
+✔ Cancelled login never opens browser or sends an OAuth request (0.7979ms)
+✔ Refresh uses issued client ID, serializes replacement and recovers a JWKS outage (3.9907ms)
+✔ Logout clears local tokens but preserves registration; reports failed revocation (1.2035ms)
+✔ Profile selection never combines registrations and token sets (2.4599ms)
+✔ Responses payload uses instructions, store=false and stream=true without unsupported fields (0.2408ms)
+✔ SSE reassembles UTF-8 and CRLF across byte boundaries and requires completed (3.4853ms)
+✔ Regression: preserve delta text when completed output is empty or absent (4.1779ms)
+✔ Reconstruct done events in content order without duplicating repeated text (0.3678ms)
+✔ Empty genuine completion remains an error with safe diagnostics (0.2345ms)
+✔ Collected text is rejected without completed, on failed/incomplete or inconsistent done text (0.9632ms)
+✔ SSE rejects malformed, incomplete, refusal, tool calls and inconsistent completion (0.6359ms)
+✔ SSE output limit and HTTP errors cannot produce successful partial output (0.5085ms)
+✔ JSON transport preserves full-body timeout classification (0.3075ms)
+✔ Model catalog preserves account ordering; unavailable model makes no inference call (0.5067ms)
+✔ Generate waits for real completion and sends no mock-response payload (0.3325ms)
+✔ Windows DPAPI roundtrip and encrypted credential persistence with synthetic tokens (5492.1874ms)
+ℹ tests 21
+ℹ suites 0
+ℹ pass 21
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 5729.4747

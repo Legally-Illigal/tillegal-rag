@@ -1,0 +1,19 @@
+{
+  "status": "SUFFICIENT",
+  "issue_checks": [
+    {
+      "issue_id": "I1",
+      "evidence_ids": [
+        "E1"
+      ],
+      "coverage": "full"
+    }
+  ],
+  "missing_items": [],
+  "next_queries": [],
+  "usable_evidence_ids": [
+    "E1"
+  ],
+  "explanation": "E1 nêu điều kiện B của ví dụ giả định.",
+  "error_code": null
+}

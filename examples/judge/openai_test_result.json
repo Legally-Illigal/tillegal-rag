@@ -1,0 +1,14 @@
+{
+  "python": {
+    "python": "3.14.2 (tags/v3.14.2:df79316, Dec  5 2025, 17:18:21) [MSC v.1944 64 bit (AMD64)]",
+    "tests_run": 69,
+    "passed": 69,
+    "errors": 0,
+    "failures": 0,
+    "skipped": 0,
+    "successful": true
+  },
+  "node_regression_exit_code": 0,
+  "openai_live_run": false,
+  "semantic_accuracy_evaluated": false
+}

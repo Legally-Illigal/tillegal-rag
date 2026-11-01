@@ -1,0 +1,29 @@
+✔ PKCE, host identity, scope, callback and real app name are explicit (7.5093ms)
+✔ OAuth rejects wrong state, denied grant, missing/changed client ID and duplicate code (2.7984ms)
+✔ ID token verifies real RSA signature, issuer, audience, expiry, nonce and subject (15.2892ms)
+✔ Full loopback login persists issued registration and verified identity; credentials never in status (74.0075ms)
+✔ Failed account verification preserves previous active account and pending registration (22.0288ms)
+✔ Cancelled login never opens browser or sends an OAuth request (0.6776ms)
+✔ Refresh uses issued client ID, serializes replacement and recovers a JWKS outage (5.1936ms)
+✔ Logout clears local tokens but preserves registration; reports failed revocation (1.8913ms)
+✔ Profile selection never combines registrations and token sets (2.7194ms)
+✔ Responses payload uses instructions, store=false and stream=true without unsupported fields (0.5322ms)
+✔ SSE reassembles UTF-8 and CRLF across byte boundaries and requires completed (5.7513ms)
+✔ Regression: preserve delta text when completed output is empty or absent (7.5012ms)
+✔ Reconstruct done events in content order without duplicating repeated text (1.0018ms)
+✔ Empty genuine completion remains an error with safe diagnostics (0.4233ms)
+✔ Collected text is rejected without completed, on failed/incomplete or inconsistent done text (1.8336ms)
+✔ SSE rejects malformed, incomplete, refusal, tool calls and inconsistent completion (1.3072ms)
+✔ SSE output limit and HTTP errors cannot produce successful partial output (1.0199ms)
+✔ JSON transport preserves full-body timeout classification (0.5788ms)
+✔ Model catalog preserves account ordering; unavailable model makes no inference call (1.4826ms)
+✔ Generate waits for real completion and sends no mock-response payload (0.8023ms)
+✔ Windows DPAPI roundtrip and encrypted credential persistence with synthetic tokens (8075.8113ms)
+ℹ tests 21
+ℹ suites 0
+ℹ pass 21
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 8512.6313

@@ -1,0 +1,131 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Tillegal Judge output v1 (Python adds relational checks)",
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "status": {
+      "enum": [
+        "SUFFICIENT",
+        "INSUFFICIENT",
+        "ERROR"
+      ]
+    },
+    "issue_checks": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "issue_id": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 256,
+            "pattern": "\\S"
+          },
+          "evidence_ids": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 256,
+              "pattern": "\\S"
+            },
+            "minItems": 0,
+            "maxItems": 128,
+            "uniqueItems": true
+          },
+          "coverage": {
+            "enum": [
+              "full",
+              "partial",
+              "none"
+            ]
+          }
+        },
+        "required": [
+          "issue_id",
+          "evidence_ids",
+          "coverage"
+        ]
+      },
+      "minItems": 0,
+      "maxItems": 64
+    },
+    "missing_items": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1,
+        "maxLength": 4000,
+        "pattern": "\\S"
+      },
+      "minItems": 0,
+      "maxItems": 128,
+      "uniqueItems": true
+    },
+    "next_queries": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "text": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 10000,
+            "pattern": "\\S"
+          },
+          "target_issue_id": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 256,
+            "pattern": "\\S"
+          }
+        },
+        "required": [
+          "text",
+          "target_issue_id"
+        ]
+      },
+      "minItems": 0,
+      "maxItems": 64
+    },
+    "usable_evidence_ids": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1,
+        "maxLength": 256,
+        "pattern": "\\S"
+      },
+      "minItems": 0,
+      "maxItems": 128,
+      "uniqueItems": true
+    },
+    "explanation": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 6000,
+      "pattern": "\\S"
+    },
+    "error_code": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "minLength": 1,
+      "maxLength": 128,
+      "pattern": "\\S"
+    }
+  },
+  "required": [
+    "status",
+    "issue_checks",
+    "missing_items",
+    "next_queries",
+    "usable_evidence_ids",
+    "explanation",
+    "error_code"
+  ]
+}

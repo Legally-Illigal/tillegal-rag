@@ -1,0 +1,70 @@
+{
+  "judge-demo-synthetic": {
+    "runtime": "Python 3.12.14 / Unicode 15",
+    "provider_mode": "mock",
+    "semantic_evaluation": false,
+    "evidence_count": 3,
+    "quote_chars": 128,
+    "bundle_status": "ASSEMBLED",
+    "result": {
+      "status": "SUFFICIENT",
+      "issue_checks": [
+        {
+          "issue_id": "I1",
+          "evidence_ids": [
+            "evidence:367a9bece44c4dade9a148d2f2a6474a8156ea52829e8b6c5e843495cc1523fd",
+            "evidence:7dac9ded4604266cd5b3896accce415602e7108ba24e97ef7876c1daefa9e094",
+            "evidence:e0bea43a1043a329e7e26055018c789ac25b57834ad23d99db9e13b989c9b1f5"
+          ],
+          "coverage": "full"
+        }
+      ],
+      "missing_items": [],
+      "next_queries": [],
+      "usable_evidence_ids": [
+        "evidence:367a9bece44c4dade9a148d2f2a6474a8156ea52829e8b6c5e843495cc1523fd",
+        "evidence:7dac9ded4604266cd5b3896accce415602e7108ba24e97ef7876c1daefa9e094",
+        "evidence:e0bea43a1043a329e7e26055018c789ac25b57834ad23d99db9e13b989c9b1f5"
+      ],
+      "explanation": "MOCK fixture dựng sẵn cho ví dụ giả định: căn cứ điều kiện B. Không phải đánh giá LLM.",
+      "error_code": null
+    },
+    "telemetry": {
+      "prompt_version": "tillegal-judge-v1.0",
+      "model": "fixture-replay-no-semantic-evaluation",
+      "provider_mode": "mock",
+      "provider_calls": 1,
+      "error_code": null,
+      "stage": "output",
+      "input_bytes": 14438,
+      "latency_ms": 2.084
+    }
+  },
+  "judge-demo-pilot": {
+    "runtime": "Python 3.14.2 / Unicode 16",
+    "provider_mode": "mock",
+    "semantic_evaluation": false,
+    "evidence_count": 19,
+    "quote_chars": 2687,
+    "bundle_status": "ASSEMBLED",
+    "result": {
+      "status": "ERROR",
+      "issue_checks": [],
+      "missing_items": [],
+      "next_queries": [],
+      "usable_evidence_ids": [],
+      "explanation": "MOCK: chưa đánh giá ngữ nghĩa; chỉ kiểm tra luồng kỹ thuật.",
+      "error_code": "MOCK_NOT_EVALUATED"
+    },
+    "telemetry": {
+      "prompt_version": "tillegal-judge-v1.0",
+      "model": "fixture-replay-no-semantic-evaluation",
+      "provider_mode": "mock",
+      "provider_calls": 1,
+      "error_code": "MOCK_NOT_EVALUATED",
+      "stage": "output",
+      "input_bytes": 62270,
+      "latency_ms": 5.465
+    }
+  }
+}
