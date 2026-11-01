@@ -20,6 +20,8 @@ python -B -m ai_core.judge_cli evaluate --input examples/judge/input.json --prov
 
 Kiểm thử offline: `python -B -m unittest discover -s tests -v`; SDK tests cần dependency Gemini. Smoke index đã kiểm tra trên Python 3.14 (Unicode 16); giữ kiểm tra integrity nếu dùng runtime khác. Vòng lặp LangGraph chưa được triển khai trong module Judge này.
 
+Summarize Agent độc lập và demo một lượt `retrieval -> EvidenceBuilder -> Judge -> Summary` được mô tả trong [báo cáo Summary](docs/summary_agent.md). Chạy từ JSON đã lưu bằng `python -B -m ai_core.summary_cli summarize`; fixture offline phải được chỉ định, live Gemini hoặc ChatGPT cần opt-in. Output gồm draft, claims, citations, limitations và version, luôn chưa Verify. BasicRAG giữ nguyên contract baseline.
+
 Tillegal is a Retrieval-Augmented Generation (RAG) system for Vietnamese legal question answering. The system retrieves relevant legal provisions from an indexed document collection and uses a Large Language Model (LLM) to generate evidence-grounded answers with source citations.
 
 The current release provides a sequential RAG pipeline with hybrid retrieval, reranking, evidence construction, and LLM-based answer generation.

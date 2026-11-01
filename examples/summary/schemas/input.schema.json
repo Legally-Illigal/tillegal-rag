@@ -1,0 +1,381 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "properties": {
+    "schema_version": {
+      "enum": [
+        "1"
+      ]
+    },
+    "request_id": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 256,
+      "pattern": "\\S"
+    },
+    "question": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 10000,
+      "pattern": "\\S"
+    },
+    "as_of_date": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "minLength": 1,
+      "maxLength": 10,
+      "pattern": "\\S",
+      "format": "date"
+    },
+    "query_plan": {
+      "type": "object",
+      "properties": {
+        "issues": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "issue_id": {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 256,
+                "pattern": "\\S"
+              },
+              "text": {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 4000,
+                "pattern": "\\S"
+              }
+            },
+            "additionalProperties": false,
+            "required": [
+              "issue_id",
+              "text"
+            ]
+          },
+          "minItems": 1,
+          "maxItems": 64,
+          "uniqueItems": false
+        }
+      },
+      "additionalProperties": false,
+      "required": [
+        "issues"
+      ]
+    },
+    "evidence_bundle": {
+      "type": "object",
+      "properties": {
+        "schema_version": {
+          "enum": [
+            "1"
+          ]
+        },
+        "builder_version": {
+          "enum": [
+            "evidence-builder-v1"
+          ]
+        },
+        "request_id": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 256,
+          "pattern": "\\S"
+        },
+        "query": {
+          "type": "string",
+          "maxLength": 10000
+        },
+        "index_id": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 256,
+          "pattern": "\\S"
+        },
+        "bundle_id": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 256,
+          "pattern": "\\S"
+        },
+        "source": {
+          "type": "object"
+        },
+        "corpus_snapshot_id": {
+          "type": "null"
+        },
+        "usage_policy": {
+          "enum": [
+            "EXPERIMENTAL_ONLY"
+          ]
+        },
+        "approved_for_legal_verification": {
+          "enum": [
+            false
+          ]
+        },
+        "retrieval_status": {
+          "enum": [
+            "OK",
+            "EMPTY_QUERY",
+            "NO_MATCH"
+          ]
+        },
+        "status": {
+          "enum": [
+            "EMPTY",
+            "PARTIAL",
+            "ASSEMBLED"
+          ]
+        },
+        "budget": {
+          "type": "object",
+          "properties": {
+            "max_chunks": {
+              "type": "integer",
+              "minimum": 1
+            },
+            "max_quote_chars": {
+              "type": "integer",
+              "minimum": 1
+            }
+          },
+          "additionalProperties": false,
+          "required": [
+            "max_chunks",
+            "max_quote_chars"
+          ]
+        },
+        "quote_chars": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "evidence": {
+          "type": "array",
+          "items": {
+            "type": "object"
+          },
+          "minItems": 0,
+          "maxItems": 128,
+          "uniqueItems": false
+        },
+        "groups": {
+          "type": "array",
+          "items": {
+            "type": "object"
+          },
+          "minItems": 0,
+          "maxItems": 100,
+          "uniqueItems": false
+        },
+        "limitations": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 4000,
+            "pattern": "\\S"
+          },
+          "minItems": 0,
+          "maxItems": 1024,
+          "uniqueItems": true
+        },
+        "trace": {
+          "type": "object"
+        }
+      },
+      "additionalProperties": true,
+      "required": [
+        "schema_version",
+        "builder_version",
+        "request_id",
+        "query",
+        "index_id",
+        "bundle_id",
+        "source",
+        "corpus_snapshot_id",
+        "usage_policy",
+        "approved_for_legal_verification",
+        "retrieval_status",
+        "status",
+        "budget",
+        "quote_chars",
+        "evidence",
+        "groups",
+        "limitations",
+        "trace"
+      ]
+    },
+    "judge_result": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "status": {
+          "enum": [
+            "SUFFICIENT",
+            "INSUFFICIENT",
+            "ERROR"
+          ]
+        },
+        "issue_checks": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+              "issue_id": {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 256,
+                "pattern": "\\S"
+              },
+              "evidence_ids": {
+                "type": "array",
+                "items": {
+                  "type": "string",
+                  "minLength": 1,
+                  "maxLength": 256,
+                  "pattern": "\\S"
+                },
+                "minItems": 0,
+                "maxItems": 128,
+                "uniqueItems": true
+              },
+              "coverage": {
+                "enum": [
+                  "full",
+                  "partial",
+                  "none"
+                ]
+              }
+            },
+            "required": [
+              "issue_id",
+              "evidence_ids",
+              "coverage"
+            ]
+          },
+          "minItems": 0,
+          "maxItems": 64
+        },
+        "missing_items": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 4000,
+            "pattern": "\\S"
+          },
+          "minItems": 0,
+          "maxItems": 128,
+          "uniqueItems": true
+        },
+        "next_queries": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+              "text": {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 10000,
+                "pattern": "\\S"
+              },
+              "target_issue_id": {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 256,
+                "pattern": "\\S"
+              }
+            },
+            "required": [
+              "text",
+              "target_issue_id"
+            ]
+          },
+          "minItems": 0,
+          "maxItems": 64
+        },
+        "usable_evidence_ids": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 256,
+            "pattern": "\\S"
+          },
+          "minItems": 0,
+          "maxItems": 128,
+          "uniqueItems": true
+        },
+        "explanation": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 6000,
+          "pattern": "\\S"
+        },
+        "error_code": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "minLength": 1,
+          "maxLength": 128,
+          "pattern": "\\S"
+        }
+      },
+      "required": [
+        "status",
+        "issue_checks",
+        "missing_items",
+        "next_queries",
+        "usable_evidence_ids",
+        "explanation",
+        "error_code"
+      ]
+    },
+    "stop_reason": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "minLength": 1,
+      "maxLength": 256,
+      "pattern": "\\S"
+    },
+    "draft_version": {
+      "type": "integer",
+      "minimum": 1
+    },
+    "previous_draft": {
+      "type": [
+        "object",
+        "null"
+      ]
+    },
+    "verification_report": {
+      "type": [
+        "object",
+        "null"
+      ]
+    }
+  },
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "request_id",
+    "question",
+    "as_of_date",
+    "query_plan",
+    "evidence_bundle",
+    "judge_result",
+    "stop_reason",
+    "draft_version",
+    "previous_draft",
+    "verification_report"
+  ]
+}

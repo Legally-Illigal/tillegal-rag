@@ -33,7 +33,7 @@ def _error_diagnostics(exc):
     return {"api_status": status if status in statuses else None, "error_reason": reason}
 
 
-def gemini_output_schema():
+def gemini_output_schema(schema=None):
     """Portable decoding subset. Full constraints remain enforced by JudgeAgent."""
     omit = {"minLength", "maxLength", "pattern", "uniqueItems"}
 
@@ -43,7 +43,7 @@ def gemini_output_schema():
         if isinstance(value, list):
             return [project(v) for v in value]
         return value
-    return project(deepcopy(OUTPUT_SCHEMA))
+    return project(deepcopy(OUTPUT_SCHEMA if schema is None else schema))
 
 
 def _load_sdk():
@@ -63,6 +63,7 @@ class GeminiProvider:
     max_output_tokens: int = 4096
     max_input_bytes: int = 120000
     max_output_chars: int = 24000
+    output_schema: dict | None = field(default=None, repr=False)
     mode = "live"
     provider_name = "gemini"
 
@@ -82,15 +83,19 @@ class GeminiProvider:
                 or type(self.max_input_bytes) is not int or not 1024 <= self.max_input_bytes <= 120000
                 or type(self.max_output_chars) is not int or not 128 <= self.max_output_chars <= 65536):
             raise GenerationError("GEMINI_CONFIGURATION_ERROR")
+        if self.output_schema is not None and (not isinstance(self.output_schema, dict) or not self.output_schema):
+            raise GenerationError("GEMINI_CONFIGURATION_ERROR")
+        object.__setattr__(self, "output_schema", deepcopy(self.output_schema))
 
     @classmethod
     def from_environment(cls, *, model=None, allow_live=False, timeout_seconds=30,
-                         max_output_tokens=4096, max_input_bytes=120000, max_output_chars=24000):
+                         max_output_tokens=4096, max_input_bytes=120000, max_output_chars=24000,
+                         output_schema=None):
         """Only the explicit server env; no .env discovery, ADC, cookie or OAuth."""
         return cls(model=os.environ.get("GEMINI_MODEL", "") if model is None else model,
                    api_key=os.environ.get("GEMINI_API_KEY", ""), allow_live=allow_live,
                    timeout_seconds=timeout_seconds, max_output_tokens=max_output_tokens,
-                   max_input_bytes=max_input_bytes, max_output_chars=max_output_chars)
+                   max_input_bytes=max_input_bytes, max_output_chars=max_output_chars, output_schema=output_schema)
 
     def generate(self, messages):
         started = perf_counter()
@@ -123,7 +128,7 @@ class GeminiProvider:
                 retry_options=types.HttpRetryOptions(attempts=1),
                 client_args={"trust_env": False, "follow_redirects": False})
             config = types.GenerateContentConfig(system_instruction=messages[0]["content"],
-                response_mime_type="application/json", response_json_schema=gemini_output_schema(),
+                response_mime_type="application/json", response_json_schema=gemini_output_schema(self.output_schema),
                 # candidate_count is unsupported on Gemini 3/4. Omit universally;
                 # require exactly one returned candidate below instead.
                 max_output_tokens=self.max_output_tokens,

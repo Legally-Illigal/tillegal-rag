@@ -1,0 +1,13 @@
+{
+  "request_id": "summary-bm25-live",
+  "question": "Điều kiện tổ chức đối thoại tại nơi làm việc là gì?",
+  "query_plan": {
+    "issues": [
+      {
+        "issue_id": "I1",
+        "text": "Căn cứ và điều kiện tổ chức đối thoại tại nơi làm việc"
+      }
+    ]
+  },
+  "as_of_date": "2026-10-09"
+}

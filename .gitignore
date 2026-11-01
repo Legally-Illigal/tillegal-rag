@@ -71,3 +71,9 @@ AGENTS.md
 !/tests/test_openai_provider.py
 
 !/tests/test_gemini_provider.py
+
+# Summary technical tests and optional local environment.
+!/tests/test_summary_agent.py
+!/tests/test_summary_integration.py
+!/tests/test_summary_partial_policy.py
+/.venv-summary/
